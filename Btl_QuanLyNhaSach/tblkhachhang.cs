@@ -37,7 +37,7 @@ namespace Btl_QuanLyNhaSach
             }
             DeleteTextBoxes();
         }
-
+        
         // Sử lí sự kiện nhập vào textbox số lượng chỉ nhận số không nhận kí tự chữ
         private void iSoLuong_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -176,16 +176,20 @@ namespace Btl_QuanLyNhaSach
 
         private void textBox_TimKiemKhachHang_TextChanged(object sender, EventArgs e)
         {
-            string name = textBox_TimKiemKhachHang.Text.Trim();
-            if (name == "")
-            {
-                tblkhachhang_Load(sender, e);
-            }
-            else
-            {
-                string query = "SELECT sMaKH AS 'Mã Khách Hàng', sTenKH AS 'Tên Khách Hàng', sDiachi AS 'Địa Chỉ', sSdt AS 'Số Điện Thoại', sEmail AS 'Email' FROM tblKhachHang WHERE sMaKH LIKE N'%" + name + "%'";
-                dataGridView_KhachHang.DataSource = modifyKhachHang.Table(query);
-            }
+            string keyword = textBox_TimKiemKhachHang.Text.Trim();
+
+            // Tạo câu truy vấn SQL với điều kiện tìm kiếm theo nhiều trường
+            string query = "SELECT sMaKH AS 'Mã Khách Hàng', sTenKH AS 'Tên Khách Hàng', sDiachi AS 'Địa Chỉ', sSdt AS 'Số Điện Thoại', sEmail AS 'Email' " +
+                           "FROM tblKhachHang " +
+                           "WHERE sMaKH LIKE N'%" + keyword + "%' OR " +
+                                 "sTenKH LIKE N'%" + keyword + "%' OR " +
+                                 "sSdt LIKE N'%" + keyword + "%' OR " +
+                                 "sDiachi LIKE N'%" + keyword + "%' OR " +
+                                 "sEmail LIKE N'%" + keyword + "%'";
+
+            // Gọi phương thức để lấy dữ liệu từ câu truy vấn và hiển thị trên dataGridView
+            dataGridView_KhachHang.DataSource = modifyKhachHang.Table(query);
         }
+
     }
 }
