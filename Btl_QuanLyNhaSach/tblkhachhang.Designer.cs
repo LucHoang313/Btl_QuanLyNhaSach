@@ -51,7 +51,7 @@
             // 
             this.dataGridView_KhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_KhachHang.Location = new System.Drawing.Point(25, 235);
-            this.dataGridView_KhachHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView_KhachHang.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_KhachHang.Name = "dataGridView_KhachHang";
             this.dataGridView_KhachHang.RowHeadersWidth = 62;
             this.dataGridView_KhachHang.RowTemplate.Height = 28;
@@ -69,7 +69,7 @@
             this.btnCapNhatKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCapNhatKhachHang.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhatKhachHang.Location = new System.Drawing.Point(672, 373);
-            this.btnCapNhatKhachHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCapNhatKhachHang.Margin = new System.Windows.Forms.Padding(2);
             this.btnCapNhatKhachHang.Name = "btnCapNhatKhachHang";
             this.btnCapNhatKhachHang.Size = new System.Drawing.Size(140, 36);
             this.btnCapNhatKhachHang.TabIndex = 34;
@@ -86,7 +86,7 @@
             this.btnXoaKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoaKhachHang.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaKhachHang.Location = new System.Drawing.Point(672, 262);
-            this.btnXoaKhachHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoaKhachHang.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoaKhachHang.Name = "btnXoaKhachHang";
             this.btnXoaKhachHang.Size = new System.Drawing.Size(128, 35);
             this.btnXoaKhachHang.TabIndex = 33;
@@ -103,7 +103,7 @@
             this.btnThemKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemKhachHang.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemKhachHang.Location = new System.Drawing.Point(672, 319);
-            this.btnThemKhachHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemKhachHang.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemKhachHang.Name = "btnThemKhachHang";
             this.btnThemKhachHang.Size = new System.Drawing.Size(128, 35);
             this.btnThemKhachHang.TabIndex = 32;
@@ -113,9 +113,10 @@
             // 
             // sSDT
             // 
+            this.sSDT.BackColor = System.Drawing.Color.White;
             this.sSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sSDT.Location = new System.Drawing.Point(136, 142);
-            this.sSDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sSDT.Margin = new System.Windows.Forms.Padding(2);
             this.sSDT.Name = "sSDT";
             this.sSDT.Size = new System.Drawing.Size(207, 23);
             this.sSDT.TabIndex = 25;
@@ -133,9 +134,10 @@
             // 
             // sTenKH
             // 
+            this.sTenKH.BackColor = System.Drawing.Color.White;
             this.sTenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sTenKH.Location = new System.Drawing.Point(136, 101);
-            this.sTenKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sTenKH.Margin = new System.Windows.Forms.Padding(2);
             this.sTenKH.Name = "sTenKH";
             this.sTenKH.Size = new System.Drawing.Size(207, 23);
             this.sTenKH.TabIndex = 23;
@@ -153,9 +155,10 @@
             // 
             // sMaKH
             // 
+            this.sMaKH.BackColor = System.Drawing.Color.White;
             this.sMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sMaKH.Location = new System.Drawing.Point(136, 57);
-            this.sMaKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sMaKH.Margin = new System.Windows.Forms.Padding(2);
             this.sMaKH.Name = "sMaKH";
             this.sMaKH.Size = new System.Drawing.Size(148, 23);
             this.sMaKH.TabIndex = 21;
@@ -184,9 +187,10 @@
             // 
             // sDiaChi
             // 
+            this.sDiaChi.BackColor = System.Drawing.Color.White;
             this.sDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sDiaChi.Location = new System.Drawing.Point(419, 58);
-            this.sDiaChi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sDiaChi.Margin = new System.Windows.Forms.Padding(2);
             this.sDiaChi.Name = "sDiaChi";
             this.sDiaChi.Size = new System.Drawing.Size(233, 23);
             this.sDiaChi.TabIndex = 39;
@@ -204,9 +208,10 @@
             // 
             // sEmail
             // 
+            this.sEmail.BackColor = System.Drawing.Color.White;
             this.sEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sEmail.Location = new System.Drawing.Point(419, 101);
-            this.sEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sEmail.Margin = new System.Windows.Forms.Padding(2);
             this.sEmail.Name = "sEmail";
             this.sEmail.Size = new System.Drawing.Size(204, 23);
             this.sEmail.TabIndex = 41;
@@ -243,7 +248,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(832, 474);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.sEmail);
@@ -261,7 +266,7 @@
             this.Controls.Add(this.sMaKH);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "tblkhachhang";
             this.Text = "Khách Hàng";
             this.Load += new System.EventHandler(this.tblkhachhang_Load);

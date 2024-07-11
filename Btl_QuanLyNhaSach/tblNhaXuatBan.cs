@@ -51,7 +51,7 @@ namespace Btl_QuanLyNhaSach
 
         private bool CheckText()
         {
-            if (txtMaNXB.Text == "" || txtTenNXB.Text == "" || txtDiaChi.Text == "" )
+            if (txtMaNXB.Text == "" || txtTenNXB.Text == "" || txtDiaChi.Text == "")
             {
                 MessageBox.Show("Mời bạn nhập đầy đủ thông tin!");
                 return false;
@@ -66,10 +66,10 @@ namespace Btl_QuanLyNhaSach
             {
                 SqlConnection conn = Connection.GetSqlConnection();
                 string sql = "SELECT sMaNXB FROM  tblNhaXuatBan WHERE sMaNXB = '" + txtMaNXB.Text + "'";
-                SqlCommand cmd = new SqlCommand(sql,conn);  
+                SqlCommand cmd = new SqlCommand(sql, conn);
                 conn.Open();
                 string sMaNXB = (string)cmd.ExecuteScalar();
-                if(sMaNXB != null)
+                if (sMaNXB != null)
                 {
                     MessageBox.Show("Mã Nhà Xuất Bản Đã Tồn Tại!");
                     return;
@@ -97,14 +97,14 @@ namespace Btl_QuanLyNhaSach
                 string query = "UPDATE tblNhaXuatBan set " + "sMaNXB = '" + txtMaNXB.Text + "', sTenNXB = N'" + txtTenNXB.Text + "' , " + "sDiaChi = N'" + txtDiaChi.Text + "'WHERE sMaNXB = '" + txtMaNXB.Text + "'";
                 modifyNXB.Command(query);
                 MessageBox.Show("Bạn đã cập nhật thành công nhà xuất bản");
-                tblNhaXuatBan_Load(sender,e);
+                tblNhaXuatBan_Load(sender, e);
 
             }
         }
 
         private void btnXoaNXB_Click(object sender, EventArgs e)
         {
-            string query = "DELETE tblNhaXuatBan WHERE sMaNXB = '" + txtMaNXB.Text +"'";
+            string query = "DELETE tblNhaXuatBan WHERE sMaNXB = '" + txtMaNXB.Text + "'";
             modifyNXB.Command(query);
             MessageBox.Show("Bạn đã xóa thành công Nhà Xuất Bản!");
             xoaNXB();
@@ -115,9 +115,9 @@ namespace Btl_QuanLyNhaSach
             txtMaNXB.Text = "";
             txtTenNXB.Text = "";
             txtDiaChi.Text = "";
-            
+
         }
 
-       
+
     }
 }

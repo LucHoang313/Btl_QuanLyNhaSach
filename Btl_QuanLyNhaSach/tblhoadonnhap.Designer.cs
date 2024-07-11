@@ -50,7 +50,7 @@
             // 
             this.dataGridView_HDNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_HDNhap.Location = new System.Drawing.Point(8, 150);
-            this.dataGridView_HDNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView_HDNhap.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_HDNhap.Name = "dataGridView_HDNhap";
             this.dataGridView_HDNhap.RowHeadersWidth = 62;
             this.dataGridView_HDNhap.RowTemplate.Height = 28;
@@ -63,7 +63,7 @@
             // 
             this.sTimKiemMaHDNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sTimKiemMaHDNhap.Location = new System.Drawing.Point(146, 28);
-            this.sTimKiemMaHDNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sTimKiemMaHDNhap.Margin = new System.Windows.Forms.Padding(2);
             this.sTimKiemMaHDNhap.Name = "sTimKiemMaHDNhap";
             this.sTimKiemMaHDNhap.Size = new System.Drawing.Size(198, 23);
             this.sTimKiemMaHDNhap.TabIndex = 38;
@@ -73,7 +73,7 @@
             // 
             this.btnCapNhatHDNhap.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhatHDNhap.Location = new System.Drawing.Point(574, 348);
-            this.btnCapNhatHDNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCapNhatHDNhap.Margin = new System.Windows.Forms.Padding(2);
             this.btnCapNhatHDNhap.Name = "btnCapNhatHDNhap";
             this.btnCapNhatHDNhap.Size = new System.Drawing.Size(153, 25);
             this.btnCapNhatHDNhap.TabIndex = 36;
@@ -85,7 +85,7 @@
             // 
             this.btnXoaHDNhap.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaHDNhap.Location = new System.Drawing.Point(670, 389);
-            this.btnXoaHDNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoaHDNhap.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoaHDNhap.Name = "btnXoaHDNhap";
             this.btnXoaHDNhap.Size = new System.Drawing.Size(128, 23);
             this.btnXoaHDNhap.TabIndex = 35;
@@ -97,7 +97,7 @@
             // 
             this.btnThemHDNhap.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemHDNhap.Location = new System.Drawing.Point(503, 389);
-            this.btnThemHDNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemHDNhap.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemHDNhap.Name = "btnThemHDNhap";
             this.btnThemHDNhap.Size = new System.Drawing.Size(128, 23);
             this.btnThemHDNhap.TabIndex = 34;
@@ -120,7 +120,7 @@
             // 
             this.sMaHDNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sMaHDNhap.Location = new System.Drawing.Point(97, 102);
-            this.sMaHDNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sMaHDNhap.Margin = new System.Windows.Forms.Padding(2);
             this.sMaHDNhap.Name = "sMaHDNhap";
             this.sMaHDNhap.Size = new System.Drawing.Size(212, 23);
             this.sMaHDNhap.TabIndex = 23;
@@ -152,7 +152,7 @@
             this.dNgayNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dNgayNhap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dNgayNhap.Location = new System.Drawing.Point(97, 146);
-            this.dNgayNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dNgayNhap.Margin = new System.Windows.Forms.Padding(2);
             this.dNgayNhap.Name = "dNgayNhap";
             this.dNgayNhap.Size = new System.Drawing.Size(212, 23);
             this.dNgayNhap.TabIndex = 42;
@@ -162,9 +162,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.sTimKiemMaHDNhap);
             this.groupBox1.Location = new System.Drawing.Point(19, 64);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(398, 65);
             this.groupBox1.TabIndex = 44;
             this.groupBox1.TabStop = false;
@@ -188,9 +188,9 @@
             this.groupBox2.Controls.Add(this.dNgayNhap);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(488, 64);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(324, 269);
             this.groupBox2.TabIndex = 45;
             this.groupBox2.TabStop = false;
@@ -200,7 +200,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(832, 474);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -209,7 +209,7 @@
             this.Controls.Add(this.btnXoaHDNhap);
             this.Controls.Add(this.btnThemHDNhap);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "tblhoadonnhap";
             this.Text = "Hóa Đơn Nhập";
             this.Load += new System.EventHandler(this.tblhoadonnhap_Load);

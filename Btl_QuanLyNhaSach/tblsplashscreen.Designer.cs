@@ -56,7 +56,7 @@
             // 
             // panel_load
             // 
-            this.panel_load.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel_load.BackColor = System.Drawing.Color.LightSkyBlue;
             this.panel_load.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_load.Location = new System.Drawing.Point(6, 6);
             this.panel_load.Name = "panel_load";
@@ -70,7 +70,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(379, 180);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 34);
+            this.label2.Size = new System.Drawing.Size(112, 27);
             this.label2.TabIndex = 6;
             this.label2.Text = "ĐTĐ.Com";
             // 
@@ -81,7 +81,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(261, 131);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(404, 34);
+            this.label1.Size = new System.Drawing.Size(317, 27);
             this.label1.TabIndex = 5;
             this.label1.Text = "CHÀO MỪNG BẠN ĐẾN VỚI\r\n";
             // 
@@ -97,9 +97,9 @@
             // 
             // tblsplashscreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(700, 428);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

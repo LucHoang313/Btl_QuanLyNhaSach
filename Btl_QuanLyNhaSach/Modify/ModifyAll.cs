@@ -25,9 +25,14 @@ namespace Btl_QuanLyNhaSach.Modify
             }
         }
 
+        internal object Table(string v)
+        {
+            throw new NotImplementedException();
+        }
+
 
         // Tạo dataTable để đổ dữ liệu vào datagridview
-        public DataTable Table(string query)
+        public DataTable Table(string query, SqlParameter[] sqlParameters)
         {
             DataTable dataTable = new DataTable();
             using (SqlConnection sqlConnection = Connection.GetSqlConnection())

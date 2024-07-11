@@ -50,10 +50,10 @@
             this.checkShow_dangky.AutoSize = true;
             this.checkShow_dangky.BackColor = System.Drawing.Color.White;
             this.checkShow_dangky.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.checkShow_dangky.Location = new System.Drawing.Point(353, 235);
-            this.checkShow_dangky.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkShow_dangky.Location = new System.Drawing.Point(265, 191);
+            this.checkShow_dangky.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkShow_dangky.Name = "checkShow_dangky";
-            this.checkShow_dangky.Size = new System.Drawing.Size(18, 17);
+            this.checkShow_dangky.Size = new System.Drawing.Size(15, 14);
             this.checkShow_dangky.TabIndex = 17;
             this.checkShow_dangky.UseVisualStyleBackColor = false;
             this.checkShow_dangky.CheckedChanged += new System.EventHandler(this.checkShow_dangky_CheckedChanged);
@@ -64,9 +64,10 @@
             this.label2.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(43, 193);
+            this.label2.Location = new System.Drawing.Point(32, 157);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 22);
+            this.label2.Size = new System.Drawing.Size(61, 17);
             this.label2.TabIndex = 13;
             this.label2.Text = "Password";
             // 
@@ -74,20 +75,20 @@
             // 
             this.txtPassword_dangky.BackColor = System.Drawing.Color.White;
             this.txtPassword_dangky.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword_dangky.Location = new System.Drawing.Point(47, 227);
-            this.txtPassword_dangky.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPassword_dangky.Location = new System.Drawing.Point(35, 184);
+            this.txtPassword_dangky.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPassword_dangky.Name = "txtPassword_dangky";
-            this.txtPassword_dangky.Size = new System.Drawing.Size(344, 30);
+            this.txtPassword_dangky.Size = new System.Drawing.Size(259, 26);
             this.txtPassword_dangky.TabIndex = 12;
             // 
             // txtUsername_dangky
             // 
             this.txtUsername_dangky.BackColor = System.Drawing.Color.White;
             this.txtUsername_dangky.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername_dangky.Location = new System.Drawing.Point(47, 151);
-            this.txtUsername_dangky.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsername_dangky.Location = new System.Drawing.Point(35, 123);
+            this.txtUsername_dangky.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUsername_dangky.Name = "txtUsername_dangky";
-            this.txtUsername_dangky.Size = new System.Drawing.Size(344, 30);
+            this.txtUsername_dangky.Size = new System.Drawing.Size(259, 26);
             this.txtUsername_dangky.TabIndex = 11;
             // 
             // label1
@@ -95,9 +96,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(43, 118);
+            this.label1.Location = new System.Drawing.Point(32, 96);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 22);
+            this.label1.Size = new System.Drawing.Size(60, 17);
             this.label1.TabIndex = 10;
             this.label1.Text = "Username";
             // 
@@ -105,10 +107,10 @@
             // 
             this.txtAccountname_dangky.BackColor = System.Drawing.Color.White;
             this.txtAccountname_dangky.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAccountname_dangky.Location = new System.Drawing.Point(47, 321);
-            this.txtAccountname_dangky.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAccountname_dangky.Location = new System.Drawing.Point(35, 261);
+            this.txtAccountname_dangky.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAccountname_dangky.Name = "txtAccountname_dangky";
-            this.txtAccountname_dangky.Size = new System.Drawing.Size(344, 30);
+            this.txtAccountname_dangky.Size = new System.Drawing.Size(259, 26);
             this.txtAccountname_dangky.TabIndex = 19;
             // 
             // label5
@@ -116,9 +118,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Narrow", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(43, 287);
+            this.label5.Location = new System.Drawing.Point(32, 233);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 22);
+            this.label5.Size = new System.Drawing.Size(81, 17);
             this.label5.TabIndex = 18;
             this.label5.Text = "Accountname";
             // 
@@ -127,9 +130,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(56, 399);
+            this.label6.Location = new System.Drawing.Point(42, 324);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 19);
+            this.label6.Size = new System.Drawing.Size(66, 16);
             this.label6.TabIndex = 20;
             this.label6.Text = "Mã Loại: ";
             // 
@@ -142,10 +146,10 @@
             this.btnDangKyTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangKyTaiKhoan.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKyTaiKhoan.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDangKyTaiKhoan.Location = new System.Drawing.Point(713, 475);
-            this.btnDangKyTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDangKyTaiKhoan.Location = new System.Drawing.Point(535, 386);
+            this.btnDangKyTaiKhoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDangKyTaiKhoan.Name = "btnDangKyTaiKhoan";
-            this.btnDangKyTaiKhoan.Size = new System.Drawing.Size(268, 49);
+            this.btnDangKyTaiKhoan.Size = new System.Drawing.Size(201, 40);
             this.btnDangKyTaiKhoan.TabIndex = 22;
             this.btnDangKyTaiKhoan.Text = "Đăng Ký Tài Khoản";
             this.btnDangKyTaiKhoan.UseVisualStyleBackColor = false;
@@ -159,32 +163,33 @@
             this.cbb_MaLoai.Items.AddRange(new object[] {
             "Kế Toán",
             "Nhân Viên"});
-            this.cbb_MaLoai.Location = new System.Drawing.Point(139, 395);
-            this.cbb_MaLoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbb_MaLoai.Location = new System.Drawing.Point(104, 321);
+            this.cbb_MaLoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbb_MaLoai.Name = "cbb_MaLoai";
-            this.cbb_MaLoai.Size = new System.Drawing.Size(252, 33);
+            this.cbb_MaLoai.Size = new System.Drawing.Size(190, 28);
             this.cbb_MaLoai.TabIndex = 23;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(399, 21);
+            this.label3.Location = new System.Drawing.Point(299, 17);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(274, 33);
+            this.label3.Size = new System.Drawing.Size(211, 26);
             this.label3.TabIndex = 24;
             this.label3.Text = "Đăng Ký Tài Khoản";
             // 
             // dataGridView_TaiKhoan
             // 
             this.dataGridView_TaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_TaiKhoan.Location = new System.Drawing.Point(426, 118);
-            this.dataGridView_TaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView_TaiKhoan.Location = new System.Drawing.Point(320, 96);
+            this.dataGridView_TaiKhoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView_TaiKhoan.Name = "dataGridView_TaiKhoan";
             this.dataGridView_TaiKhoan.RowHeadersWidth = 62;
             this.dataGridView_TaiKhoan.RowTemplate.Height = 28;
             this.dataGridView_TaiKhoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_TaiKhoan.Size = new System.Drawing.Size(621, 300);
+            this.dataGridView_TaiKhoan.Size = new System.Drawing.Size(466, 244);
             this.dataGridView_TaiKhoan.TabIndex = 25;
             this.dataGridView_TaiKhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_TaiKhoan_CellClick);
             // 
@@ -196,10 +201,10 @@
             this.btnXoaTaiKhoan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
             this.btnXoaTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoaTaiKhoan.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaTaiKhoan.Location = new System.Drawing.Point(114, 475);
-            this.btnXoaTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnXoaTaiKhoan.Location = new System.Drawing.Point(86, 386);
+            this.btnXoaTaiKhoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnXoaTaiKhoan.Name = "btnXoaTaiKhoan";
-            this.btnXoaTaiKhoan.Size = new System.Drawing.Size(268, 49);
+            this.btnXoaTaiKhoan.Size = new System.Drawing.Size(201, 40);
             this.btnXoaTaiKhoan.TabIndex = 26;
             this.btnXoaTaiKhoan.Text = "Xóa Tài Khoản";
             this.btnXoaTaiKhoan.UseVisualStyleBackColor = false;
@@ -213,10 +218,10 @@
             this.btnSuaTaiKhoan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
             this.btnSuaTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSuaTaiKhoan.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaTaiKhoan.Location = new System.Drawing.Point(416, 475);
-            this.btnSuaTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSuaTaiKhoan.Location = new System.Drawing.Point(312, 386);
+            this.btnSuaTaiKhoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSuaTaiKhoan.Name = "btnSuaTaiKhoan";
-            this.btnSuaTaiKhoan.Size = new System.Drawing.Size(268, 49);
+            this.btnSuaTaiKhoan.Size = new System.Drawing.Size(201, 40);
             this.btnSuaTaiKhoan.TabIndex = 27;
             this.btnSuaTaiKhoan.Text = "Sửa Tài Khoản";
             this.btnSuaTaiKhoan.UseVisualStyleBackColor = false;
@@ -224,10 +229,10 @@
             // 
             // dangky
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.ClientSize = new System.Drawing.Size(1087, 563);
+            this.ClientSize = new System.Drawing.Size(815, 457);
             this.Controls.Add(this.btnSuaTaiKhoan);
             this.Controls.Add(this.btnXoaTaiKhoan);
             this.Controls.Add(this.dataGridView_TaiKhoan);
@@ -243,7 +248,7 @@
             this.Controls.Add(this.txtUsername_dangky);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "dangky";
             this.Text = "Đăng Ký";
             this.Load += new System.EventHandler(this.dangky_Load);
