@@ -37,7 +37,7 @@ namespace Btl_QuanLyNhaSach
             }
             DeleteTextBoxes();
         }
-        
+
         // Sử lí sự kiện nhập vào textbox số lượng chỉ nhận số không nhận kí tự chữ
         private void iSoLuong_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -66,7 +66,7 @@ namespace Btl_QuanLyNhaSach
         private bool CheckText()
         {
             if (sTenKH.Text == "" || sSDT.Text == "" || sDiaChi.Text == "" || sEmail.Text == ""
-                || sMaKH.Text == "" )
+                || sMaKH.Text == "")
             {
                 MessageBox.Show("Mời bạn nhập đầy đủ thông tin!");
                 return false;
@@ -174,22 +174,40 @@ namespace Btl_QuanLyNhaSach
             }
         }
 
-        private void textBox_TimKiemKhachHang_TextChanged(object sender, EventArgs e)
+        // Sử lí sự kiện tìm kiếm
+        private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            string keyword = textBox_TimKiemKhachHang.Text.Trim();
+            string query = "SELECT sMaKH AS 'Mã Khách Hàng', sTenKH AS 'Tên Khách Hàng', sDiachi AS 'Địa Chỉ', sSdt AS 'Số Điện Thoại', sEmail AS 'Email' FROM tblKhachHang WHERE 1=1";
 
-            // Tạo câu truy vấn SQL với điều kiện tìm kiếm theo nhiều trường
-            string query = "SELECT sMaKH AS 'Mã Khách Hàng', sTenKH AS 'Tên Khách Hàng', sDiachi AS 'Địa Chỉ', sSdt AS 'Số Điện Thoại', sEmail AS 'Email' " +
-                           "FROM tblKhachHang " +
-                           "WHERE sMaKH LIKE N'%" + keyword + "%' OR " +
-                                 "sTenKH LIKE N'%" + keyword + "%' OR " +
-                                 "sSdt LIKE N'%" + keyword + "%' OR " +
-                                 "sDiachi LIKE N'%" + keyword + "%' OR " +
-                                 "sEmail LIKE N'%" + keyword + "%'";
+            if (!string.IsNullOrEmpty(sMaKH.Text))
+            {
+                query += " AND sMaKH LIKE '%" + sMaKH.Text + "%'";
+            }
+            if (!string.IsNullOrEmpty(sTenKH.Text))
+            {
+                query += " AND sTenKH LIKE N'%" + sTenKH.Text + "%'";
+            }
+            if (!string.IsNullOrEmpty(sDiaChi.Text))
+            {
+                query += " AND sDiachi LIKE N'%" + sDiaChi.Text + "%'";
+            }
+            if (!string.IsNullOrEmpty(sSDT.Text))
+            {
+                query += " AND sSdt LIKE '%" + sSDT.Text + "%'";
+            }
+            if (!string.IsNullOrEmpty(sEmail.Text))
+            {
+                query += " AND sEmail LIKE '%" + sEmail.Text + "%'";
+            }
 
-            // Gọi phương thức để lấy dữ liệu từ câu truy vấn và hiển thị trên dataGridView
-            dataGridView_KhachHang.DataSource = modifyKhachHang.Table(query);
+            try
+            {
+                dataGridView_KhachHang.DataSource = modifyKhachHang.Table(query);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
         }
-
     }
 }

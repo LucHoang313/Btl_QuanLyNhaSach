@@ -30,16 +30,25 @@ namespace Btl_QuanLyNhaSach
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            if(txtTimKiem.Text == "")
+            string keyword = txtTimKiem.Text.Trim();
+
+            if (keyword == "")
             {
                 tblNhaXuatBan_Load(sender, e);
             }
             else
             {
-                string query = "SELECT * FROM tblNhaXuatBan WHERE sMaNXB LIKE N'%" + txtTimKiem.Text + "%'";
+                // Tạo câu truy vấn SQL với điều kiện tìm kiếm theo nhiều trường
+                string query = "SELECT * FROM tblNhaXuatBan " +
+                               "WHERE sMaNXB LIKE N'%" + keyword + "%' OR " +
+                                     "sTenNXB LIKE N'%" + keyword + "%' OR " +
+                                     "sDiaChi LIKE N'%" + keyword + "%'";
+
+                // Gọi phương thức để lấy dữ liệu từ câu truy vấn và hiển thị trên dataGridView
                 dataGridView_NXB.DataSource = modifyNXB.Table(query);
             }
         }
+
         private bool CheckText()
         {
             if (txtMaNXB.Text == "" || txtTenNXB.Text == "" || txtDiaChi.Text == "" )

@@ -231,16 +231,28 @@ namespace Btl_QuanLyNhaSach
 
         private void textBox_TimKiemSach_TextChanged(object sender, EventArgs e)
         {
-            string name = textBox_TimKiemSach.Text.Trim();
-            if (name == "")
+            string keyword = textBox_TimKiemSach.Text.Trim();
+
+            if (keyword == "")
             {
                 tblsach_Load(sender, e);
             }
             else
             {
-                string query = "SELECT sMaSach AS 'Mã Sách', sTenSach AS 'Tên Sách', fGiaSach AS 'Giá Sách', iSoLuong AS 'Số Lượng Trong Kho', sMaNXB AS 'Mã NXB', sTheLoai AS 'Thể Loại' FROM tblSach WHERE sTenSach LIKE N'%" + name + "%'";
+                // Tạo câu truy vấn SQL với điều kiện tìm kiếm theo nhiều trường
+                string query = "SELECT sMaSach AS 'Mã Sách', sTenSach AS 'Tên Sách', fGiaSach AS 'Giá Sách', iSoLuong AS 'Số Lượng Trong Kho', sMaNXB AS 'Mã NXB', sTheLoai AS 'Thể Loại' " +
+                               "FROM tblSach " +
+                               "WHERE sMaSach LIKE N'%" + keyword + "%' OR " +
+                                     "sTenSach LIKE N'%" + keyword + "%' OR " +
+                                     "fGiaSach LIKE N'%" + keyword + "%' OR " +
+                                     "iSoLuong LIKE N'%" + keyword + "%' OR " +
+                                     "sMaNXB LIKE N'%" + keyword + "%' OR " +
+                                     "sTheLoai LIKE N'%" + keyword + "%'";
+
+                // Gọi phương thức để lấy dữ liệu từ câu truy vấn và hiển thị trên dataGridView
                 dataGridView_Sach.DataSource = modifySach.Table(query);
             }
         }
+
     }
 }
