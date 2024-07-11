@@ -257,8 +257,21 @@ namespace Btl_QuanLyNhaSach
 
         private void dtG1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dtG1.Rows[e.RowIndex];
 
+                // Hiển thị dữ liệu từ DataGridView lên các control tương ứng
+                txtMaNV.Text = row.Cells["iMaNV"].Value.ToString();
+                txtName.Text = row.Cells["sHoTen"].Value.ToString();
+                txtNgaySinh.Value = Convert.ToDateTime(row.Cells["dNgaySinh"].Value);
+                txtPhuCap.Text = row.Cells["fPhuCap"].Value.ToString();
+                txtLuongCB.Text = row.Cells["fLuongCB"].Value.ToString();
+                txtDienThoai.Text = row.Cells["sDienThoai"].Value.ToString();
+                txtCD.Text = row.Cells["CCCD"].Value.ToString();
+            }
         }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -269,5 +282,35 @@ namespace Btl_QuanLyNhaSach
         {
 
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string maNV = txtMaNV.Text.Trim();
+            string tenNV = txtName.Text.Trim();
+            string dienThoai = txtDienThoai.Text.Trim();
+            string cccd = txtCD.Text.Trim();
+
+            string connection = @"Data Source=.;Initial Catalog=BTL_QLNS;Integrated Security=True";
+            string query = "SELECT * FROM tblNhanVien WHERE " +
+                           "iMaNV LIKE '%" + maNV + "%' AND " +
+                           "sHoTen LIKE N'%" + tenNV + "%' AND " +
+                           "sDienThoai LIKE '%" + dienThoai + "%' AND " +
+                           "CCCD LIKE '%" + cccd + "%'";
+
+            using (SqlConnection cnn = new SqlConnection(connection))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, cnn))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    using (SqlDataAdapter ad = new SqlDataAdapter(cmd))
+                    {
+                        DataTable tb = new DataTable("NV");
+                        ad.Fill(tb);
+                        dtG1.DataSource = tb;
+                    }
+                }
+            }
+        }
+
     }
 }
