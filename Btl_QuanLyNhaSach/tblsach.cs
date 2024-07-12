@@ -30,7 +30,7 @@ namespace Btl_QuanLyNhaSach
         {
             SqlConnection con = Connection.GetSqlConnection();
             string sql = "SELECT * FROM tblNhaXuatBan WHERE sMaNXB" +
-                "    = '" + comboBox1.Text + "'";
+                " = '" + comboBox1.Text + "'";
             SqlCommand cmd = new SqlCommand(sql, con);
             SqlDataReader myreader; try
             {
@@ -76,10 +76,10 @@ namespace Btl_QuanLyNhaSach
             try
             {
                 dataGridView_Sach.DataSource = modifySach.Table("SELECT sMaSach AS 'Mã Sách', sTenSach AS 'Tên Sách', fGiaSach AS 'Giá Sách', iSoLuong AS 'Số Lượng Trong Kho', sMaNXB AS 'Mã NXB', sTheLoai AS 'Thể Loại' FROM tblSach");
-            }   
-            catch(Exception ex)
+            }
+            catch (Exception ex)
             {
-                MessageBox.Show("Lỗi: " +ex.Message);
+                MessageBox.Show("Lỗi: " + ex.Message);
             }
             DeleteTextBoxes();
         }
@@ -91,11 +91,11 @@ namespace Btl_QuanLyNhaSach
             if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-            }    
+            }
             else
             {
                 e.Handled = true;
-            }    
+            }
         }
 
         // Sử lí sự kiện xóa hết các kí tự trong các ô
@@ -116,16 +116,16 @@ namespace Btl_QuanLyNhaSach
             {
                 MessageBox.Show("Mời bạn chọn Mã NXB!");
                 return false;
-            } 
+            }
             if (sTenNXB.Text == "" || sMaSach.Text == "" || fGiaSach.Text == "" || iSoLuong.Text == ""
                 || sTenSach.Text == "" || sTheLoai.Text == "")
             {
                 MessageBox.Show("Mời bạn nhập đầy đủ thông tin!");
                 return false;
-            }    
+            }
 
             return true;
-               
+
         }
 
         // Chuyền dữ liệu nhập vào trong đối tượng Sach
@@ -177,7 +177,7 @@ namespace Btl_QuanLyNhaSach
                 iSoLuong.Text = dataGridView_Sach.SelectedRows[0].Cells[3].Value.ToString();
                 comboBox1.SelectedItem = dataGridView_Sach.SelectedRows[0].Cells[4].Value.ToString();
                 sTheLoai.Text = dataGridView_Sach.SelectedRows[0].Cells[5].Value.ToString();
-            }    
+            }
         }
 
         // Sử lí sự kiện xóa dữ liệu
@@ -229,30 +229,79 @@ namespace Btl_QuanLyNhaSach
             }
         }
 
-        private void textBox_TimKiemSach_TextChanged(object sender, EventArgs e)
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            string keyword = textBox_TimKiemSach.Text.Trim();
+            string query = "SELECT sMaSach AS 'Mã Sách', sTenSach AS 'Tên Sách', fGiaSach AS 'Giá Sách', iSoLuong AS 'Số Lượng Trong Kho', sMaNXB AS 'Mã NXB', sTheLoai AS 'Thể Loại' FROM tblSach WHERE 1=1";
 
-            if (keyword == "")
+            if (!string.IsNullOrEmpty(sMaSach.Text))
             {
-                tblsach_Load(sender, e);
+                query += " AND sMaSach LIKE '%" + sMaSach.Text + "%'";
             }
-            else
-            {
-                // Tạo câu truy vấn SQL với điều kiện tìm kiếm theo nhiều trường
-                string query = "SELECT sMaSach AS 'Mã Sách', sTenSach AS 'Tên Sách', fGiaSach AS 'Giá Sách', iSoLuong AS 'Số Lượng Trong Kho', sMaNXB AS 'Mã NXB', sTheLoai AS 'Thể Loại' " +
-                               "FROM tblSach " +
-                               "WHERE sMaSach LIKE N'%" + keyword + "%' OR " +
-                                     "sTenSach LIKE N'%" + keyword + "%' OR " +
-                                     "fGiaSach LIKE N'%" + keyword + "%' OR " +
-                                     "iSoLuong LIKE N'%" + keyword + "%' OR " +
-                                     "sMaNXB LIKE N'%" + keyword + "%' OR " +
-                                     "sTheLoai LIKE N'%" + keyword + "%'";
 
-                // Gọi phương thức để lấy dữ liệu từ câu truy vấn và hiển thị trên dataGridView
+            if (!string.IsNullOrEmpty(sTenSach.Text))
+            {
+                query += " AND sTenSach LIKE N'%" + sTenSach.Text + "%'";
+            }
+
+            if (!string.IsNullOrEmpty(fGiaSach.Text))
+            {
+                query += " AND fGiaSach LIKE '%" + fGiaSach.Text + "%'";
+            }
+
+            if (!string.IsNullOrEmpty(iSoLuong.Text))
+            {
+                query += " AND iSoLuong LIKE '%" + iSoLuong.Text + "%'";
+            }
+
+            if (!string.IsNullOrEmpty(comboBox1.Text))
+            {
+                query += " AND sMaNXB LIKE '%" + comboBox1.Text + "%'";
+            }
+
+            if (!string.IsNullOrEmpty(sTheLoai.Text))
+            {
+                query += " AND sTheLoai LIKE N'%" + sTheLoai.Text + "%'";
+            }
+
+            try
+            {
                 dataGridView_Sach.DataSource = modifySach.Table(query);
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tìm kiếm: " + ex.Message);
+            }
         }
+
+        // Sử lí sự kiện tiếp tục
+        private void btnTiepTuc_Click(object sender, EventArgs e)
+        {
+            ClearTextBoxesAndComboBox(this);
+        }
+
+        private void ClearTextBoxesAndComboBox(Control container)
+        {
+            foreach (Control ctrl in container.Controls)
+            {
+                if (ctrl is TextBox)
+                {
+                    ((TextBox)ctrl).Clear();
+                }
+                else if (ctrl is ComboBox)
+                {
+                    ((ComboBox)ctrl).Text = string.Empty;
+                }
+
+                // If the container has nested controls, call the method recursively
+                if (ctrl.HasChildren)
+                {
+                    ClearTextBoxesAndComboBox(ctrl);
+                }
+            }
+        }
+
+
 
     }
 }
