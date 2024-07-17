@@ -209,5 +209,15 @@ namespace Btl_QuanLyNhaSach
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
         }
+
+        private void btnTiepTuc_Click(object sender, EventArgs e)
+        {
+            // Xóa toàn bộ dữ liệu đang được nhập
+            DeleteTextBoxes();
+
+            // Datagridview trở về trạng thái ban đầu
+            tblkhachhang_Load(sender, e);
+        }
+
     }
 }

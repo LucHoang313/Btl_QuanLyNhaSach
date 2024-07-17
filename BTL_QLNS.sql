@@ -94,12 +94,26 @@ CREATE TABLE tblTaiKhoan (
 );
 GO
 
+-- Thêm sMaLoai vào bảng tblTaiKhoan (chạy lại phần này)
+ALTER TABLE tblTaiKhoan
+ADD sMaLoai VARCHAR(20);
+
+--Tạo bảng tblLoaiTaiKhoan(chạy lại phần này)
+create table tblLoaiTaiKhoan(
+	sMaLoai varchar(20) primary key not null,
+	sTenLoai nvarchar(30) not null
+)
+GO
 -- Tạo các liên kết giữa các bảng
 ALTER TABLE tblSach
 ADD CONSTRAINT Fk_tblSach_tblNhaXuatBan FOREIGN KEY (sMaNXB)
 REFERENCES tblNhaXuatBan(sMaNXB) ON DELETE CASCADE;
 GO
-
+-- Liên kết bảng tblTaiKhoan(chạy lại phần này)
+alter table tblTaiKhoan
+add constraint Fk_tblTaiKhoan_tblLoaiTaiKhoan foreign key (sMaLoai)
+references tblLoaiTaiKhoan(sMaLoai) ON DELETE CASCADE
+GO
 ALTER TABLE tblChiTietHoaDonNhap
 ADD CONSTRAINT Fk_tblChiTietHoaDonNhap_tblHoaDonNhap FOREIGN KEY (sMaHDNhap)
 REFERENCES tblHoaDonNhap(sMaHDNhap) ON DELETE CASCADE;
@@ -200,6 +214,26 @@ VALUES
 ('user02', 'password02', N'Trần Thị Bích', 2),
 ('user03', 'password03', N'Lê Văn Cường', 3);
 GO
+
+-- Chèn sữ liệu vào bảng tblLoaiTaiKhoan(chạy lại phần này)
+INSERT INTO tblLoaiTaiKhoan (sMaLoai, sTenLoai)
+VALUES 
+('admin', N'Quản trị viên'),
+('staff', N'Nhân viên'),
+GO
+
+-- Bổ sung dữ liệu cho tblTaiKhoan(chạy lại phần này)
+UPDATE tblTaiKhoan
+SET sMaLoai = 'admin'
+WHERE sTenTk = 'user01';
+
+UPDATE tblTaiKhoan
+SET sMaLoai = 'staff'
+WHERE sTenTk = 'user02';
+
+UPDATE tblTaiKhoan
+SET sMaLoai = 'staff'
+WHERE sTenTk = 'user03';
 
 -- Tạo trigger
 
@@ -339,4 +373,9 @@ GO
 -
 
 
-drop proc proc_hoadonnhap
+create table tblTgTaiKhoan
+(
+	sTenTk varchar(10) not null,
+	dTgDangNhap date not null,
+)
+GO

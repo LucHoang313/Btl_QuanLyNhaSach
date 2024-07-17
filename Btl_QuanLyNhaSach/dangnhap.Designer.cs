@@ -43,6 +43,7 @@
             this.txtUsername_dangnhap = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnDangKy = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -59,7 +60,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.Color.Cyan;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(275, 401);
             this.panel1.TabIndex = 0;
@@ -92,7 +93,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(63, 63);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(134, 130);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -130,8 +131,8 @@
             this.btnDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnDangNhap.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.Color.Black;
-            this.btnDangNhap.Location = new System.Drawing.Point(356, 306);
-            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDangNhap.Location = new System.Drawing.Point(356, 294);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(2);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(262, 41);
             this.btnDangNhap.TabIndex = 6;
@@ -145,7 +146,7 @@
             this.txtQuenMatKhau.BackColor = System.Drawing.Color.White;
             this.txtQuenMatKhau.Font = new System.Drawing.Font("Arial", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuenMatKhau.ForeColor = System.Drawing.Color.Brown;
-            this.txtQuenMatKhau.Location = new System.Drawing.Point(353, 362);
+            this.txtQuenMatKhau.Location = new System.Drawing.Point(357, 380);
             this.txtQuenMatKhau.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtQuenMatKhau.Name = "txtQuenMatKhau";
             this.txtQuenMatKhau.Size = new System.Drawing.Size(106, 16);
@@ -157,7 +158,7 @@
             // 
             this.checkBox.AutoSize = true;
             this.checkBox.Location = new System.Drawing.Point(243, 15);
-            this.checkBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox.Name = "checkBox";
             this.checkBox.Size = new System.Drawing.Size(15, 14);
             this.checkBox.TabIndex = 11;
@@ -171,7 +172,7 @@
             this.txtPassword_dangnhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword_dangnhap.ForeColor = System.Drawing.Color.Black;
             this.txtPassword_dangnhap.Location = new System.Drawing.Point(11, 11);
-            this.txtPassword_dangnhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword_dangnhap.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword_dangnhap.Name = "txtPassword_dangnhap";
             this.txtPassword_dangnhap.Size = new System.Drawing.Size(222, 19);
             this.txtPassword_dangnhap.TabIndex = 12;
@@ -183,7 +184,7 @@
             this.panel2.Controls.Add(this.txtPassword_dangnhap);
             this.panel2.ForeColor = System.Drawing.SystemColors.WindowText;
             this.panel2.Location = new System.Drawing.Point(356, 253);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(262, 37);
             this.panel2.TabIndex = 13;
@@ -194,7 +195,7 @@
             this.txtUsername_dangnhap.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername_dangnhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername_dangnhap.Location = new System.Drawing.Point(9, 11);
-            this.txtUsername_dangnhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsername_dangnhap.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername_dangnhap.Name = "txtUsername_dangnhap";
             this.txtUsername_dangnhap.Size = new System.Drawing.Size(246, 19);
             this.txtUsername_dangnhap.TabIndex = 2;
@@ -205,7 +206,7 @@
             this.panel3.Controls.Add(this.txtUsername_dangnhap);
             this.panel3.ForeColor = System.Drawing.Color.Black;
             this.panel3.Location = new System.Drawing.Point(358, 181);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(262, 37);
             this.panel3.TabIndex = 14;
@@ -214,12 +215,25 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(360, 9);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(261, 144);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
+            // 
+            // btnDangKy
+            // 
+            this.btnDangKy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnDangKy.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDangKy.ForeColor = System.Drawing.Color.Black;
+            this.btnDangKy.Location = new System.Drawing.Point(358, 336);
+            this.btnDangKy.Name = "btnDangKy";
+            this.btnDangKy.Size = new System.Drawing.Size(260, 41);
+            this.btnDangKy.TabIndex = 15;
+            this.btnDangKy.Text = "Đăng Ký";
+            this.btnDangKy.UseVisualStyleBackColor = false;
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
             // dangnhap
             // 
@@ -227,6 +241,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(712, 401);
+            this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox2);
@@ -237,7 +252,7 @@
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(728, 440);
             this.MinimumSize = new System.Drawing.Size(728, 440);
             this.Name = "dangnhap";
@@ -274,6 +289,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtUsername_dangnhap;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnDangKy;
     }
 }
 

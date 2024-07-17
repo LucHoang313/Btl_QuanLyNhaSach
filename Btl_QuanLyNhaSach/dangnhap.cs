@@ -80,6 +80,8 @@ namespace Btl_QuanLyNhaSach
             }
         }
 
+        
+
         // Sử lí sự button Quên mật khẩu
         private void txtQuenMatKhau_Click(object sender, EventArgs e)
         {
@@ -98,6 +100,15 @@ namespace Btl_QuanLyNhaSach
                 e.Cancel = true;
                 Application.Exit();
             }
+        }
+
+        private void btnDangKy_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            dangky dangky = new dangky();
+            dangky.ShowDialog();
+            dangky = null;
+            this.Show();
         }
     }
 }

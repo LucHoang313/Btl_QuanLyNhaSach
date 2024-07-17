@@ -44,6 +44,7 @@
             this.sEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnTimKiem = new System.Windows.Forms.Button();
+            this.btnTiepTuc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_KhachHang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,7 +89,7 @@
             this.btnXoaKhachHang.Location = new System.Drawing.Point(672, 262);
             this.btnXoaKhachHang.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoaKhachHang.Name = "btnXoaKhachHang";
-            this.btnXoaKhachHang.Size = new System.Drawing.Size(128, 35);
+            this.btnXoaKhachHang.Size = new System.Drawing.Size(140, 35);
             this.btnXoaKhachHang.TabIndex = 33;
             this.btnXoaKhachHang.Text = "Xóa Khách Hàng";
             this.btnXoaKhachHang.UseVisualStyleBackColor = false;
@@ -105,7 +106,7 @@
             this.btnThemKhachHang.Location = new System.Drawing.Point(672, 319);
             this.btnThemKhachHang.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemKhachHang.Name = "btnThemKhachHang";
-            this.btnThemKhachHang.Size = new System.Drawing.Size(128, 35);
+            this.btnThemKhachHang.Size = new System.Drawing.Size(140, 35);
             this.btnThemKhachHang.TabIndex = 32;
             this.btnThemKhachHang.Text = "Thêm Khách Hàng";
             this.btnThemKhachHang.UseVisualStyleBackColor = false;
@@ -238,11 +239,24 @@
             this.btnTimKiem.Location = new System.Drawing.Point(672, 206);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(128, 35);
+            this.btnTimKiem.Size = new System.Drawing.Size(140, 35);
             this.btnTimKiem.TabIndex = 42;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = false;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // btnTiepTuc
+            // 
+            this.btnTiepTuc.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnTiepTuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTiepTuc.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTiepTuc.Location = new System.Drawing.Point(672, 427);
+            this.btnTiepTuc.Name = "btnTiepTuc";
+            this.btnTiepTuc.Size = new System.Drawing.Size(140, 35);
+            this.btnTiepTuc.TabIndex = 43;
+            this.btnTiepTuc.Text = "Tiếp tục";
+            this.btnTiepTuc.UseVisualStyleBackColor = false;
+            this.btnTiepTuc.Click += new System.EventHandler(this.btnTiepTuc_Click);
             // 
             // tblkhachhang
             // 
@@ -250,6 +264,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(832, 474);
+            this.Controls.Add(this.btnTiepTuc);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.sEmail);
             this.Controls.Add(this.label6);
@@ -294,5 +309,6 @@
         private System.Windows.Forms.TextBox sEmail;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.Button btnTiepTuc;
     }
 }

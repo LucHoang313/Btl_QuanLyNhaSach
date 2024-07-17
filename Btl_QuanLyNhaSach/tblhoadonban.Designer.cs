@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.sTenTk = new System.Windows.Forms.TextBox();
+            this.iMaNV = new System.Windows.Forms.TextBox();
             this.dNgayLap = new System.Windows.Forms.DateTimePicker();
             this.dataGridView_HDBan = new System.Windows.Forms.DataGridView();
             this.btnCapNhatHDBan = new System.Windows.Forms.Button();
@@ -42,29 +42,27 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBox_sTenKH = new System.Windows.Forms.ComboBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.sTimKiemMaHDBan = new System.Windows.Forms.TextBox();
+            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.btnTiepTuc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_HDBan)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // sTenTk
+            // iMaNV
             // 
-            this.sTenTk.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sTenTk.Location = new System.Drawing.Point(108, 89);
-            this.sTenTk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.sTenTk.Name = "sTenTk";
-            this.sTenTk.Size = new System.Drawing.Size(196, 23);
-            this.sTenTk.TabIndex = 85;
+            this.iMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iMaNV.Location = new System.Drawing.Point(108, 89);
+            this.iMaNV.Margin = new System.Windows.Forms.Padding(2);
+            this.iMaNV.Name = "iMaNV";
+            this.iMaNV.Size = new System.Drawing.Size(196, 23);
+            this.iMaNV.TabIndex = 85;
             // 
             // dNgayLap
             // 
             this.dNgayLap.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dNgayLap.Location = new System.Drawing.Point(108, 176);
-            this.dNgayLap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dNgayLap.Margin = new System.Windows.Forms.Padding(2);
             this.dNgayLap.Name = "dNgayLap";
             this.dNgayLap.Size = new System.Drawing.Size(196, 23);
             this.dNgayLap.TabIndex = 84;
@@ -72,8 +70,8 @@
             // dataGridView_HDBan
             // 
             this.dataGridView_HDBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_HDBan.Location = new System.Drawing.Point(22, 151);
-            this.dataGridView_HDBan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView_HDBan.Location = new System.Drawing.Point(21, 60);
+            this.dataGridView_HDBan.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_HDBan.Name = "dataGridView_HDBan";
             this.dataGridView_HDBan.RowHeadersWidth = 62;
             this.dataGridView_HDBan.RowTemplate.Height = 28;
@@ -85,8 +83,8 @@
             // btnCapNhatHDBan
             // 
             this.btnCapNhatHDBan.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhatHDBan.Location = new System.Drawing.Point(563, 357);
-            this.btnCapNhatHDBan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCapNhatHDBan.Location = new System.Drawing.Point(179, 391);
+            this.btnCapNhatHDBan.Margin = new System.Windows.Forms.Padding(2);
             this.btnCapNhatHDBan.Name = "btnCapNhatHDBan";
             this.btnCapNhatHDBan.Size = new System.Drawing.Size(155, 35);
             this.btnCapNhatHDBan.TabIndex = 78;
@@ -97,8 +95,8 @@
             // btnXoaHDBan
             // 
             this.btnXoaHDBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaHDBan.Location = new System.Drawing.Point(665, 408);
-            this.btnXoaHDBan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoaHDBan.Location = new System.Drawing.Point(377, 391);
+            this.btnXoaHDBan.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoaHDBan.Name = "btnXoaHDBan";
             this.btnXoaHDBan.Size = new System.Drawing.Size(128, 35);
             this.btnXoaHDBan.TabIndex = 77;
@@ -109,8 +107,8 @@
             // btnThemHDBan
             // 
             this.btnThemHDBan.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemHDBan.Location = new System.Drawing.Point(501, 408);
-            this.btnThemHDBan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemHDBan.Location = new System.Drawing.Point(21, 391);
+            this.btnThemHDBan.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemHDBan.Name = "btnThemHDBan";
             this.btnThemHDBan.Size = new System.Drawing.Size(128, 35);
             this.btnThemHDBan.TabIndex = 76;
@@ -155,7 +153,7 @@
             // 
             this.sMaHDBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sMaHDBan.Location = new System.Drawing.Point(108, 44);
-            this.sMaHDBan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sMaHDBan.Margin = new System.Windows.Forms.Padding(2);
             this.sMaHDBan.Name = "sMaHDBan";
             this.sMaHDBan.Size = new System.Drawing.Size(196, 23);
             this.sMaHDBan.TabIndex = 69;
@@ -187,15 +185,15 @@
             this.groupBox1.Controls.Add(this.comboBox_sTenKH);
             this.groupBox1.Controls.Add(this.sMaHDBan);
             this.groupBox1.Controls.Add(this.dNgayLap);
-            this.groupBox1.Controls.Add(this.sTenTk);
+            this.groupBox1.Controls.Add(this.iMaNV);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(501, 60);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(316, 284);
             this.groupBox1.TabIndex = 86;
             this.groupBox1.TabStop = false;
@@ -206,44 +204,32 @@
             this.comboBox_sTenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_sTenKH.FormattingEnabled = true;
             this.comboBox_sTenKH.Location = new System.Drawing.Point(108, 130);
-            this.comboBox_sTenKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox_sTenKH.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_sTenKH.Name = "comboBox_sTenKH";
             this.comboBox_sTenKH.Size = new System.Drawing.Size(196, 25);
             this.comboBox_sTenKH.TabIndex = 86;
             // 
-            // groupBox2
+            // btnTimKiem
             // 
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.sTimKiemMaHDBan);
-            this.groupBox2.Location = new System.Drawing.Point(52, 60);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Size = new System.Drawing.Size(398, 65);
-            this.groupBox2.TabIndex = 87;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Tìm Kiếm Mã Hóa Đơn";
+            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTimKiem.Location = new System.Drawing.Point(547, 391);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(96, 35);
+            this.btnTimKiem.TabIndex = 87;
+            this.btnTimKiem.Text = "Tìm Kiếm";
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
-            // label3
+            // btnTiepTuc
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(43, 30);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 16);
-            this.label3.TabIndex = 44;
-            this.label3.Text = "Mã HĐ Bán";
-            // 
-            // sTimKiemMaHDBan
-            // 
-            this.sTimKiemMaHDBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sTimKiemMaHDBan.Location = new System.Drawing.Point(146, 28);
-            this.sTimKiemMaHDBan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.sTimKiemMaHDBan.Name = "sTimKiemMaHDBan";
-            this.sTimKiemMaHDBan.Size = new System.Drawing.Size(198, 23);
-            this.sTimKiemMaHDBan.TabIndex = 38;
-            this.sTimKiemMaHDBan.TextChanged += new System.EventHandler(this.sTimKiemMaHDBan_TextChanged);
+            this.btnTiepTuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTiepTuc.Location = new System.Drawing.Point(673, 391);
+            this.btnTiepTuc.Name = "btnTiepTuc";
+            this.btnTiepTuc.Size = new System.Drawing.Size(80, 35);
+            this.btnTiepTuc.TabIndex = 88;
+            this.btnTiepTuc.Text = "Tiếp Tục";
+            this.btnTiepTuc.UseVisualStyleBackColor = true;
+            this.btnTiepTuc.Click += new System.EventHandler(this.btnTiepTuc_Click);
             // 
             // tblhoadonban
             // 
@@ -251,29 +237,28 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(832, 474);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.btnTiepTuc);
+            this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView_HDBan);
             this.Controls.Add(this.btnCapNhatHDBan);
             this.Controls.Add(this.btnXoaHDBan);
             this.Controls.Add(this.btnThemHDBan);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "tblhoadonban";
             this.Text = "Hóa Đơn Bán";
             this.Load += new System.EventHandler(this.tblhoadonban_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_HDBan)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox sTenTk;
+        private System.Windows.Forms.TextBox iMaNV;
         private System.Windows.Forms.DateTimePicker dNgayLap;
         private System.Windows.Forms.DataGridView dataGridView_HDBan;
         private System.Windows.Forms.Button btnCapNhatHDBan;
@@ -286,9 +271,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox sTimKiemMaHDBan;
         private System.Windows.Forms.ComboBox comboBox_sTenKH;
+        private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.Button btnTiepTuc;
     }
 }
