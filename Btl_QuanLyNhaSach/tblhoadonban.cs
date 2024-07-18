@@ -23,14 +23,14 @@ namespace Btl_QuanLyNhaSach
         {
             InitializeComponent();
             fillCombobox();
+            fillComboBoxNhanVien();
         }
 
-        // Sử lí sự kiện đổ dữ liệu từ sql vào datagridview
         private void tblhoadonban_Load(object sender, EventArgs e)
         {
             try
             {
-                dataGridView_HDBan.DataSource = modify.Table("SELECT sMaHDBan AS 'Mã HĐ Bán', tblNhanVien.sHoTen AS 'Người lập hóa đơn', tblKhachHang.sTenKH AS 'Tên Khách Hàng', dNgayLap AS 'Ngày Lập' " +
+                dataGridView_HDBan.DataSource = modify.Table("SELECT sMaHDBan AS 'Mã HĐ Bán', tblHoaDonBan.iMaNV, tblNhanVien.sHoTen AS 'Người lập hóa đơn', tblKhachHang.sTenKH AS 'Tên Khách Hàng', dNgayLap AS 'Ngày Lập' " +
                     "FROM tblHoaDonBan " +
                     "INNER JOIN tblNhanVien ON tblHoaDonBan.iMaNV = tblNhanVien.iMaNV " +
                     "INNER JOIN tblKhachHang ON tblHoaDonBan.sMaKH = tblKhachHang.sMaKH");
@@ -42,18 +42,27 @@ namespace Btl_QuanLyNhaSach
             DeleteTextBoxes();
         }
 
-        // Sử lí sự kiện xóa hết các kí tự trong các ô
+        private void dataGridView_HDBan_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView_HDBan.Rows.Count > 1)
+            {
+                sMaHDBan.Text = dataGridView_HDBan.SelectedRows[0].Cells[0].Value.ToString();
+                comboBox_iMaNV.SelectedValue = dataGridView_HDBan.SelectedRows[0].Cells[1].Value.ToString(); // Sửa lại để hiển thị mã nhân viên
+                comboBox_sTenKH.Text = dataGridView_HDBan.SelectedRows[0].Cells[3].Value.ToString();
+                dNgayLap.Text = dataGridView_HDBan.SelectedRows[0].Cells[4].Value.ToString();
+            }
+        }
+
         private void DeleteTextBoxes()
         {
             sMaHDBan.Text = "";
-            iMaNV.Text = "";
+            comboBox_iMaNV.SelectedIndex = -1;
             dNgayLap.Text = "";
         }
 
-        // Sử lí sự kiện nhập không được để trống
         private bool CheckText()
         {
-            if (sMaHDBan.Text == "" || iMaNV.Text == "")
+            if (sMaHDBan.Text == "" || comboBox_iMaNV.SelectedIndex == -1)
             {
                 MessageBox.Show("Mời bạn nhập đầy đủ thông tin!");
                 return false;
@@ -62,21 +71,17 @@ namespace Btl_QuanLyNhaSach
             return true;
         }
 
-        // Sử lí thêm dữ liệu vào đối tượng hóa đơn bán
         private void GetValuesTextBox()
         {
             string smaHDBan = sMaHDBan.Text;
-            int imaNV = int.Parse(iMaNV.Text);
-            // Lấy giá trị mã khách hàng tương ứng
+            int imaNV = int.Parse(comboBox_iMaNV.SelectedValue.ToString());
             string smaKh = comboBox_sTenKH.SelectedValue.ToString();
             DateTime dngayLap = DateTime.Parse(dNgayLap.Text);
             hoadonban = new HoaDonBan(smaHDBan, imaNV, smaKh, dngayLap);
         }
 
-        // Sử lí sự kiện xóa hóa đơn
         private void btnXoaHDBan_Click(object sender, EventArgs e)
         {
-            // Check lớn hơn 1 dòng
             if (dataGridView_HDBan.Rows.Count > 1)
             {
                 string choose = dataGridView_HDBan.SelectedRows[0].Cells[0].Value.ToString();
@@ -98,13 +103,12 @@ namespace Btl_QuanLyNhaSach
             }
         }
 
-        // Sử lí sự kiện cập nhật hóa đơn
         private void btnCapNhatHDBan_Click(object sender, EventArgs e)
         {
             if (CheckText())
             {
                 GetValuesTextBox();
-                string query = "UPDATE tblHoaDonBan SET sMaHDBan = '" + hoadonban.SMaHDBan + "', iMaNV = '" + hoadonban.iMaNV + "'," +
+                string query = "UPDATE tblHoaDonBan SET sMaHDBan = '" + hoadonban.SMaHDBan + "', iMaNV = '" + hoadonban.imaNV + "'," +
                 " sMaKH = '" + hoadonban.SMaKH + "', " +
                 " dNgayLap = '" + hoadonban.DNgayLap + "' ";
                 query += "WHERE sMaHDBan = '" + hoadonban.SMaHDBan + "'";
@@ -124,13 +128,12 @@ namespace Btl_QuanLyNhaSach
             }
         }
 
-        // Sử lí sự kiện thêm hóa đơn
         private void btnThemHDBan_Click(object sender, EventArgs e)
         {
             if (CheckText())
             {
                 GetValuesTextBox();
-                string query = "INSERT INTO tblHoaDonBan values ('" + hoadonban.SMaHDBan + "', '" + hoadonban.iMaNV + "', '" + hoadonban.SMaKH + "'," +
+                string query = "INSERT INTO tblHoaDonBan values ('" + hoadonban.SMaHDBan + "', '" + hoadonban.imaNV + "', '" + hoadonban.SMaKH + "'," +
                 " '" + hoadonban.DNgayLap + "' ) ";
                 try
                 {
@@ -148,24 +151,8 @@ namespace Btl_QuanLyNhaSach
             }
         }
 
-        // Sử lí sự click vào item trong datagridview
-        private void dataGridView_HDBan_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dataGridView_HDBan.Rows.Count > 1)
-            {
-                sMaHDBan.Text = dataGridView_HDBan.SelectedRows[0].Cells[0].Value.ToString();
-                iMaNV.Text = dataGridView_HDBan.SelectedRows[0].Cells[1].Value.ToString();
-                comboBox_sTenKH.Text = dataGridView_HDBan.SelectedRows[0].Cells[2].Value.ToString();
-                dNgayLap.Text = dataGridView_HDBan.SelectedRows[0].Cells[3].Value.ToString();
-            }
-        }
-
-
-
-        // Sử lí sự kiện đổ dữ liệu vào combobox
         public void fillCombobox()
         {
-            // Đổ dữ liệu vào combobox
             string query = "SELECT * FROM tblKhachHang";
             SqlConnection sqlConnection = Connection.GetSqlConnection();
             sqlConnection.Open();
@@ -180,33 +167,54 @@ namespace Btl_QuanLyNhaSach
             sqlConnection.Close();
         }
 
+        public void fillComboBoxNhanVien()
+        {
+            string query = "SELECT iMaNV FROM tblNhanVien";
+            SqlConnection sqlConnection = Connection.GetSqlConnection();
+            sqlConnection.Open();
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.SelectCommand = sqlCommand;
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            comboBox_iMaNV.DataSource = table;
+            comboBox_iMaNV.DisplayMember = "iMaNV";
+            comboBox_iMaNV.ValueMember = "iMaNV";
+            sqlConnection.Close();
+        }
+
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            string query = "SELECT sMaHDBan AS 'Mã HĐ Bán', tblNhanVien.sHoTen AS 'Người lập hóa đơn', tblKhachHang.sTenKH AS 'Tên Khách Hàng', dNgayLap AS 'Ngày Lập' " +
-                   "FROM tblHoaDonBan " +
-                   "INNER JOIN tblNhanVien ON tblHoaDonBan.iMaNV = tblNhanVien.iMaNV " +
-                   "INNER JOIN tblKhachHang ON tblHoaDonBan.sMaKH = tblKhachHang.sMaKH " +
-                   "WHERE 1=1";
+            string query = "SELECT sMaHDBan AS 'Mã HĐ Bán', tblHoaDonBan.iMaNV, tblNhanVien.sHoTen AS 'Người lập hóa đơn', tblKhachHang.sTenKH AS 'Tên Khách Hàng', dNgayLap AS 'Ngày Lập' " +
+                           "FROM tblHoaDonBan " +
+                           "INNER JOIN tblNhanVien ON tblHoaDonBan.iMaNV = tblNhanVien.iMaNV " +
+                           "INNER JOIN tblKhachHang ON tblHoaDonBan.sMaKH = tblKhachHang.sMaKH " +
+                           "WHERE 1=1";
 
             if (!string.IsNullOrEmpty(sMaHDBan.Text))
             {
                 query += " AND sMaHDBan LIKE '%" + sMaHDBan.Text + "%'";
             }
 
-            if (!string.IsNullOrEmpty(iMaNV.Text))
+            if (comboBox_iMaNV.SelectedIndex != -1)
             {
-                query += " AND iMaNv LIKE N'%" + iMaNV.Text + "%'";
+                query += " AND tblHoaDonBan.iMaNV = " + comboBox_iMaNV.SelectedValue;
             }
 
             if (!string.IsNullOrEmpty(comboBox_sTenKH.Text))
             {
-                query += " AND sTenKH LIKE '%" + comboBox_sTenKH.Text + "%'";
+                query += " AND tblKhachHang.sTenKH LIKE N'%" + comboBox_sTenKH.Text + "%'";
             }
 
-            if (!string.IsNullOrEmpty(dNgayLap.Text))
-            {
-                query += " AND dNgayLap LIKE N'%" + dNgayLap.Text + "%'";
-            }
+            // Kiểm tra và thêm điều kiện tìm kiếm theo Ngày Lập
+         //   if (!string.IsNullOrEmpty(dNgayLap.Text))
+         //   {
+                // Convert ngày tháng từ DateTimePicker thành định dạng phù hợp với SQL Server
+         //       string formattedDate = dNgayLap.Value.ToString("yyyy-MM-dd");
+
+                // Thêm điều kiện vào câu truy vấn
+         //       query += " AND CONVERT(date, dNgayLap) = '" + formattedDate + "'";
+         //   }
 
             try
             {
@@ -237,6 +245,7 @@ namespace Btl_QuanLyNhaSach
                 }
                 else if (ctrl is ComboBox)
                 {
+                    ((ComboBox)ctrl).SelectedIndex = -1;
                     ((ComboBox)ctrl).Text = string.Empty;
                 }
 
@@ -247,5 +256,7 @@ namespace Btl_QuanLyNhaSach
                 }
             }
         }
+
+
     }
 }

@@ -52,6 +52,7 @@
             this.txtCD = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnTimKiem = new System.Windows.Forms.Button();
+            this.btnTiepTuc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtG1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
@@ -214,7 +215,7 @@
             // 
             // btnOut
             // 
-            this.btnOut.Location = new System.Drawing.Point(718, 227);
+            this.btnOut.Location = new System.Drawing.Point(800, 227);
             this.btnOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnOut.Name = "btnOut";
             this.btnOut.Size = new System.Drawing.Size(64, 23);
@@ -272,12 +273,23 @@
             this.btnTimKiem.UseVisualStyleBackColor = true;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
+            // btnTiepTuc
+            // 
+            this.btnTiepTuc.Location = new System.Drawing.Point(713, 227);
+            this.btnTiepTuc.Name = "btnTiepTuc";
+            this.btnTiepTuc.Size = new System.Drawing.Size(75, 23);
+            this.btnTiepTuc.TabIndex = 33;
+            this.btnTiepTuc.Text = "Tiếp Tục";
+            this.btnTiepTuc.UseVisualStyleBackColor = true;
+            this.btnTiepTuc.Click += new System.EventHandler(this.btnTiepTuc_Click);
+            // 
             // tblnhanvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(925, 522);
+            this.Controls.Add(this.btnTiepTuc);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnOut);
@@ -336,6 +348,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.Button btnTiepTuc;
     }
 }
 

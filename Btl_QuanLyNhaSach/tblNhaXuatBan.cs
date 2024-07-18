@@ -24,7 +24,7 @@ namespace Btl_QuanLyNhaSach
 
         private void tblNhaXuatBan_Load(object sender, EventArgs e)
         {
-            dataGridView_NXB.DataSource = modifyNXB.Table("Select * from tblNhaXuatBan");
+            dataGridView_NXB.DataSource = modifyNXB.Table("Select sMaNXB as 'Mã Nhà Xuất Bản' , sTenNXB as 'Tên Nhà Xuất Bản' , sDiaChi as 'Địa Chỉ' from tblNhaXuatBan");
         }
 
 

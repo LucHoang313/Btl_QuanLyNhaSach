@@ -231,7 +231,7 @@
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.Size = new System.Drawing.Size(260, 41);
             this.btnDangKy.TabIndex = 15;
-            this.btnDangKy.Text = "Đăng Ký";
+            this.btnDangKy.Text = "Tạo Tài Khoản";
             this.btnDangKy.UseVisualStyleBackColor = false;
             this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 

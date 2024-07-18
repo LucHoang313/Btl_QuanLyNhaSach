@@ -9,11 +9,11 @@ namespace Btl_QuanLyNhaSach.Object
 {
     class HoaDonBan
     {
-        internal string iMaNV;
-        private string sMaHDBan;
-        private string sMaKH;
-        private DateTime dNgayLap;
-        private int imaNV;
+        public string iMaNV;
+        public string sMaHDBan;
+        public string sMaKH;
+        public DateTime dNgayLap;
+        public int imaNV;
 
         public HoaDonBan(string smaHDBan, System.Windows.Forms.TextBox iMaNV)
         {

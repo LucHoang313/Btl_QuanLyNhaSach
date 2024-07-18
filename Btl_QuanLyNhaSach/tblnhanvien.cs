@@ -143,7 +143,7 @@ namespace Btl_QuanLyNhaSach
             string connection = @"Data Source=.;Initial Catalog=BTL_QLNS;Integrated Security=True";
             using (SqlConnection cnn = new SqlConnection(connection))
             {
-                using (SqlCommand cmd = new SqlCommand("select * from tblNhanVien", cnn))
+                using (SqlCommand cmd = new SqlCommand("select iMaNV as 'Mã Nhân Viên', sHoten as 'Họ Tên', dNgaySinh as 'Ngày Sinh' , fPhuCap as 'Phụ Cấp' , fLuongCb as 'Lương Cơ Bản' , sDienThoai as 'Số Điện Thoại' , CCCD as 'CCCD' from tblNhanVien", cnn))
                 {
                     cmd.CommandType = CommandType.Text;
                     using (SqlDataAdapter ad = new SqlDataAdapter(cmd))
@@ -254,6 +254,25 @@ namespace Btl_QuanLyNhaSach
                 MessageBox.Show("ma nhan vien dang trong");
             }
         }
+
+        private void btnTiepTuc_Click(object sender, EventArgs e)
+        {
+            // Xóa nội dung trên các control nhập liệu
+            txtMaNV.Text = "";
+            txtName.Text = "";
+            txtNgaySinh.Value = DateTime.Now; // Đặt lại ngày sinh về ngày hiện tại hoặc giá trị mặc định
+            txtPhuCap.Text = "";
+            txtLuongCB.Text = "";
+            txtDienThoai.Text = "";
+            txtCD.Text = "";
+
+            // Xóa lọc dữ liệu trên DataGridView (nếu có)
+            (dtG1.DataSource as DataTable).DefaultView.RowFilter = "";
+
+            NhanVien_Load(sender, e);
+        }
+
+
 
         private void dtG1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
