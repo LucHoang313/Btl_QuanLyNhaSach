@@ -68,5 +68,9 @@ namespace Btl_QuanLyNhaSach
             return dataTable;
         }
 
+        internal void Command(SqlCommand cmd)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

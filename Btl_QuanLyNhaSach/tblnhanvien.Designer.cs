@@ -106,7 +106,7 @@
             // 
             // btnShow
             // 
-            this.btnShow.Location = new System.Drawing.Point(348, 227);
+            this.btnShow.Location = new System.Drawing.Point(324, 227);
             this.btnShow.Margin = new System.Windows.Forms.Padding(2);
             this.btnShow.Name = "btnShow";
             this.btnShow.Size = new System.Drawing.Size(69, 23);
@@ -193,7 +193,7 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(442, 227);
+            this.btnSua.Location = new System.Drawing.Point(418, 227);
             this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(67, 23);
@@ -204,7 +204,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(529, 227);
+            this.btnXoa.Location = new System.Drawing.Point(505, 227);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(74, 23);
@@ -215,7 +215,7 @@
             // 
             // btnOut
             // 
-            this.btnOut.Location = new System.Drawing.Point(800, 227);
+            this.btnOut.Location = new System.Drawing.Point(776, 227);
             this.btnOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnOut.Name = "btnOut";
             this.btnOut.Size = new System.Drawing.Size(64, 23);
@@ -265,7 +265,7 @@
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(620, 227);
+            this.btnTimKiem.Location = new System.Drawing.Point(596, 227);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(75, 23);
             this.btnTimKiem.TabIndex = 32;
@@ -275,7 +275,7 @@
             // 
             // btnTiepTuc
             // 
-            this.btnTiepTuc.Location = new System.Drawing.Point(713, 227);
+            this.btnTiepTuc.Location = new System.Drawing.Point(689, 227);
             this.btnTiepTuc.Name = "btnTiepTuc";
             this.btnTiepTuc.Size = new System.Drawing.Size(75, 23);
             this.btnTiepTuc.TabIndex = 33;

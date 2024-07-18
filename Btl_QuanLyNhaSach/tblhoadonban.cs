@@ -30,7 +30,7 @@ namespace Btl_QuanLyNhaSach
         {
             try
             {
-                dataGridView_HDBan.DataSource = modify.Table("SELECT sMaHDBan AS 'Mã HĐ Bán', tblHoaDonBan.iMaNV, tblNhanVien.sHoTen AS 'Người lập hóa đơn', tblKhachHang.sTenKH AS 'Tên Khách Hàng', dNgayLap AS 'Ngày Lập' " +
+                dataGridView_HDBan.DataSource = modify.Table("SELECT sMaHDBan AS 'Mã HĐ Bán', tblHoaDonBan.iMaNV AS 'Mã Nhân Viên' , tblNhanVien.sHoTen AS 'Người lập hóa đơn', tblKhachHang.sTenKH AS 'Tên Khách Hàng', dNgayLap AS 'Ngày Lập' " +
                     "FROM tblHoaDonBan " +
                     "INNER JOIN tblNhanVien ON tblHoaDonBan.iMaNV = tblNhanVien.iMaNV " +
                     "INNER JOIN tblKhachHang ON tblHoaDonBan.sMaKH = tblKhachHang.sMaKH");
@@ -185,7 +185,7 @@ namespace Btl_QuanLyNhaSach
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            string query = "SELECT sMaHDBan AS 'Mã HĐ Bán', tblHoaDonBan.iMaNV, tblNhanVien.sHoTen AS 'Người lập hóa đơn', tblKhachHang.sTenKH AS 'Tên Khách Hàng', dNgayLap AS 'Ngày Lập' " +
+            string query = "SELECT sMaHDBan AS 'Mã HĐ Bán', tblHoaDonNhap.iMaNV AS 'Mã Nhân Viên' , tblNhanVien.sHoTen AS 'Người lập hóa đơn', tblKhachHang.sTenKH AS 'Tên Khách Hàng', dNgayLap AS 'Ngày Lập' " +
                            "FROM tblHoaDonBan " +
                            "INNER JOIN tblNhanVien ON tblHoaDonBan.iMaNV = tblNhanVien.iMaNV " +
                            "INNER JOIN tblKhachHang ON tblHoaDonBan.sMaKH = tblKhachHang.sMaKH " +

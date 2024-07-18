@@ -28,27 +28,6 @@ namespace Btl_QuanLyNhaSach
         }
 
 
-        private void txtTimKiem_TextChanged(object sender, EventArgs e)
-        {
-            string keyword = txtTimKiem.Text.Trim();
-
-            if (keyword == "")
-            {
-                tblNhaXuatBan_Load(sender, e);
-            }
-            else
-            {
-                // Tạo câu truy vấn SQL với điều kiện tìm kiếm theo nhiều trường
-                string query = "SELECT * FROM tblNhaXuatBan " +
-                               "WHERE sMaNXB LIKE N'%" + keyword + "%' OR " +
-                                     "sTenNXB LIKE N'%" + keyword + "%' OR " +
-                                     "sDiaChi LIKE N'%" + keyword + "%'";
-
-                // Gọi phương thức để lấy dữ liệu từ câu truy vấn và hiển thị trên dataGridView
-                dataGridView_NXB.DataSource = modifyNXB.Table(query);
-            }
-        }
-
         private bool CheckText()
         {
             if (txtMaNXB.Text == "" || txtTenNXB.Text == "" || txtDiaChi.Text == "")
@@ -118,6 +97,37 @@ namespace Btl_QuanLyNhaSach
 
         }
 
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string query = "Select sMaNXB as 'Mã Nhà Xuất Bản' , sTenNXB as 'Tên Nhà Xuất Bản' , sDiaChi as 'Địa Chỉ' from tblNhaXuatBan WHERE 1=1";
+            if (!string.IsNullOrEmpty(txtMaNXB.Text))
+            {
+                query += "AND sMaNXB LIKE '%" +txtMaNXB.Text + "%'";
+            }
+            if (!string.IsNullOrEmpty(txtTenNXB.Text))
+            {
+                query += "AND sTenNXB LIKE '%" + txtTenNXB.Text + "%'";
+            }
+            if (!string.IsNullOrEmpty(txtDiaChi.Text))
+            {
+                query += "AND sDiaChi LIKE '%" + txtDiaChi.Text + "%'";
+            }
+            try
+            {
+                dataGridView_NXB.DataSource = modifyNXB.Table(query);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
 
+        private void btnTiepTuc_Click(object sender, EventArgs e)
+        {
+            txtMaNXB.Text = "";
+            txtTenNXB.Text = "";
+            txtDiaChi.Text = "";
+
+            tblNhaXuatBan_Load(sender, e);        }
     }
 }

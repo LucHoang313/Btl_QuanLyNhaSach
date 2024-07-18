@@ -98,6 +98,10 @@ GO
 ALTER TABLE tblTaiKhoan
 ADD sMaLoai VARCHAR(20);
 
+-- Thêm sMaNXB vào bảng tblHoaDonNhap(cập nhật lần 2 - chạy lại phần này)
+ALTER TABLE tblHoaDonNhap
+add sMaNXB varchar(20);
+
 --Tạo bảng tblLoaiTaiKhoan(chạy lại phần này)
 create table tblLoaiTaiKhoan(
 	sMaLoai varchar(20) primary key not null,
@@ -114,6 +118,17 @@ alter table tblTaiKhoan
 add constraint Fk_tblTaiKhoan_tblLoaiTaiKhoan foreign key (sMaLoai)
 references tblLoaiTaiKhoan(sMaLoai) ON DELETE CASCADE
 GO
+--Tạo liên kết bảng tblHoaDonNhap (cập nhật lần 2 - chạy lại phần này)
+alter table tblHoaDonNhap
+add constraint Fk_tblHoaDonNhap_tblNhaXuatBan foreign key (sMaNXB)
+references tblNhaXuatBan(sMaNXB) 
+go
+
+--Tạo liên kết bảng tblTgTaiKhoan
+alter table tblTgTaiKhoan
+add constraint Fk_tblTgTaiKhoan_tblTaiKhoan foreign key (sTenTk)
+references tblTaiKhoan(sTenTk) On DELETE CASCADE;
+go
 ALTER TABLE tblChiTietHoaDonNhap
 ADD CONSTRAINT Fk_tblChiTietHoaDonNhap_tblHoaDonNhap FOREIGN KEY (sMaHDNhap)
 REFERENCES tblHoaDonNhap(sMaHDNhap) ON DELETE CASCADE;

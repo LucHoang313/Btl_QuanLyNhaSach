@@ -89,7 +89,7 @@
             this.sidebar.Controls.Add(this.panel3);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
-            this.sidebar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sidebar.Margin = new System.Windows.Forms.Padding(2);
             this.sidebar.MaximumSize = new System.Drawing.Size(213, 577);
             this.sidebar.MinimumSize = new System.Drawing.Size(93, 569);
             this.sidebar.Name = "sidebar";
@@ -109,7 +109,7 @@
             this.button2.Image = global::Btl_QuanLyNhaSach.Properties.Resources.sach;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(0, 402);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(27, 0, 20, 0);
             this.button2.Size = new System.Drawing.Size(213, 47);
@@ -128,7 +128,7 @@
             this.custompanel2.GradientBottomColor = System.Drawing.Color.DodgerBlue;
             this.custompanel2.GradientTopColor = System.Drawing.Color.DodgerBlue;
             this.custompanel2.Location = new System.Drawing.Point(4, 515);
-            this.custompanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.custompanel2.Margin = new System.Windows.Forms.Padding(2);
             this.custompanel2.Name = "custompanel2";
             this.custompanel2.Size = new System.Drawing.Size(207, 47);
             this.custompanel2.TabIndex = 3;
@@ -144,7 +144,7 @@
             this.button1.Image = global::Btl_QuanLyNhaSach.Properties.Resources.dangxuat;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(6, 4);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(27, 0, 20, 0);
             this.button1.Size = new System.Drawing.Size(196, 41);
@@ -160,7 +160,7 @@
             this.panelHoaDon.Controls.Add(this.button_hoadonnhap);
             this.panelHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHoaDon.Location = new System.Drawing.Point(0, 300);
-            this.panelHoaDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelHoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.panelHoaDon.MaximumSize = new System.Drawing.Size(213, 102);
             this.panelHoaDon.Name = "panelHoaDon";
             this.panelHoaDon.Size = new System.Drawing.Size(213, 102);
@@ -178,7 +178,7 @@
             this.button_hoadonban.Image = global::Btl_QuanLyNhaSach.Properties.Resources.chamtron;
             this.button_hoadonban.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_hoadonban.Location = new System.Drawing.Point(2, 53);
-            this.button_hoadonban.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_hoadonban.Margin = new System.Windows.Forms.Padding(2);
             this.button_hoadonban.Name = "button_hoadonban";
             this.button_hoadonban.Padding = new System.Windows.Forms.Padding(27, 0, 20, 0);
             this.button_hoadonban.Size = new System.Drawing.Size(209, 53);
@@ -200,7 +200,7 @@
             this.button_hoadonnhap.Image = global::Btl_QuanLyNhaSach.Properties.Resources.chamtron;
             this.button_hoadonnhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_hoadonnhap.Location = new System.Drawing.Point(2, 3);
-            this.button_hoadonnhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_hoadonnhap.Margin = new System.Windows.Forms.Padding(2);
             this.button_hoadonnhap.Name = "button_hoadonnhap";
             this.button_hoadonnhap.Padding = new System.Windows.Forms.Padding(27, 0, 20, 0);
             this.button_hoadonnhap.Size = new System.Drawing.Size(209, 47);
@@ -223,7 +223,7 @@
             this.button_HoaDon.Image = global::Btl_QuanLyNhaSach.Properties.Resources.hoadon;
             this.button_HoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_HoaDon.Location = new System.Drawing.Point(0, 253);
-            this.button_HoaDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_HoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.button_HoaDon.Name = "button_HoaDon";
             this.button_HoaDon.Padding = new System.Windows.Forms.Padding(27, 0, 20, 0);
             this.button_HoaDon.Size = new System.Drawing.Size(213, 47);
@@ -246,7 +246,7 @@
             this.button_Sach.Image = global::Btl_QuanLyNhaSach.Properties.Resources.sach;
             this.button_Sach.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Sach.Location = new System.Drawing.Point(0, 206);
-            this.button_Sach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_Sach.Margin = new System.Windows.Forms.Padding(2);
             this.button_Sach.Name = "button_Sach";
             this.button_Sach.Padding = new System.Windows.Forms.Padding(27, 0, 20, 0);
             this.button_Sach.Size = new System.Drawing.Size(213, 47);
@@ -269,7 +269,7 @@
             this.button_KhachHang.Image = global::Btl_QuanLyNhaSach.Properties.Resources.khachhang;
             this.button_KhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_KhachHang.Location = new System.Drawing.Point(0, 159);
-            this.button_KhachHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_KhachHang.Margin = new System.Windows.Forms.Padding(2);
             this.button_KhachHang.Name = "button_KhachHang";
             this.button_KhachHang.Padding = new System.Windows.Forms.Padding(27, 0, 20, 0);
             this.button_KhachHang.Size = new System.Drawing.Size(213, 47);
@@ -292,7 +292,7 @@
             this.button_TaiKhoan.Image = global::Btl_QuanLyNhaSach.Properties.Resources.taikhoan;
             this.button_TaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_TaiKhoan.Location = new System.Drawing.Point(0, 112);
-            this.button_TaiKhoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_TaiKhoan.Margin = new System.Windows.Forms.Padding(2);
             this.button_TaiKhoan.Name = "button_TaiKhoan";
             this.button_TaiKhoan.Padding = new System.Windows.Forms.Padding(27, 0, 20, 0);
             this.button_TaiKhoan.Size = new System.Drawing.Size(213, 47);
@@ -309,7 +309,7 @@
             this.panel3.Controls.Add(this.logo_button);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(213, 112);
             this.panel3.TabIndex = 7;
@@ -340,7 +340,7 @@
             // 
             this.logo_button.Image = ((System.Drawing.Image)(resources.GetObject("logo_button.Image")));
             this.logo_button.Location = new System.Drawing.Point(2, 0);
-            this.logo_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logo_button.Margin = new System.Windows.Forms.Padding(2);
             this.logo_button.Name = "logo_button";
             this.logo_button.Size = new System.Drawing.Size(94, 93);
             this.logo_button.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -381,9 +381,9 @@
             this.panel2.Controls.Add(this.nhaXuatBan);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(213, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(853, 24);
+            this.panel2.Size = new System.Drawing.Size(857, 24);
             this.panel2.TabIndex = 1;
             // 
             // nhaXuatBan
@@ -398,7 +398,7 @@
             this.nhaXuatBan.Location = new System.Drawing.Point(0, 0);
             this.nhaXuatBan.Name = "nhaXuatBan";
             this.nhaXuatBan.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.nhaXuatBan.Size = new System.Drawing.Size(853, 32);
+            this.nhaXuatBan.Size = new System.Drawing.Size(857, 32);
             this.nhaXuatBan.TabIndex = 0;
             this.nhaXuatBan.Text = "menuStrip1";
             this.nhaXuatBan.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.nhaXuatBan_ItemClicked);
@@ -474,16 +474,16 @@
             this.panel_Body.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Body.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_Body.Location = new System.Drawing.Point(213, 24);
-            this.panel_Body.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel_Body.Margin = new System.Windows.Forms.Padding(2);
             this.panel_Body.Name = "panel_Body";
-            this.panel_Body.Size = new System.Drawing.Size(853, 547);
+            this.panel_Body.Size = new System.Drawing.Size(857, 547);
             this.panel_Body.TabIndex = 2;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Btl_QuanLyNhaSach.Properties.Resources.banner1;
             this.pictureBox2.Location = new System.Drawing.Point(148, 38);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(563, 169);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -534,13 +534,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1066, 571);
+            this.ClientSize = new System.Drawing.Size(1070, 571);
             this.Controls.Add(this.panel_Body);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.sidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MainMenuStrip = this.nhaXuatBan;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(1086, 617);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1082, 535);

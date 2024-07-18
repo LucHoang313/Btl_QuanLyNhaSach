@@ -18,6 +18,12 @@ namespace Btl_QuanLyNhaSach
     public partial class dangky : Form
     {
         ModifyTaiKhoan modify = new ModifyTaiKhoan();
+        public string iMaNV;
+
+        public dangky(string iMaNV)
+        {
+            this.iMaNV = iMaNV;
+        }
 
         public dangky()
         {
@@ -88,15 +94,11 @@ namespace Btl_QuanLyNhaSach
                 MessageBox.Show("Mã Loại không được để trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (!char.IsUpper(sMatKhau[0])) // kiểm tra kí tự đầu tiên có phải là kí tự viết hoa không
-            {
-                MessageBox.Show("Mật khẩu phải có kí tự đầu tiên viết hoa!");
-                return;
-            }
+            
 
             try
             {
-                string query = "Insert into tblTaiKhoan values ('" + sTenTk + "','" + sMatKhau + "','" + sTen + "','" + sMaLoai + "')";
+                string query = "Insert into tblTaiKhoan values ('" + sTenTk + "','" + sMatKhau + "','" + iMaNV + "','" + sTen + "','" + sMaLoai + "')";
                 modify.Command(query);
                 MessageBox.Show("Bạn đã đăng kí tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dangky_Load(sender, e);

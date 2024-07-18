@@ -12,13 +12,7 @@ namespace Btl_QuanLyNhaSach.Object
         private string sTenTk;
         private DateTime dNgayNhap;
 
-        public HoaDonNhap() { }
-
-        public HoaDonNhap(string smaHDNhap, DateTime dngayNhap)
-        {
-            sMaHDNhap = smaHDNhap;
-            dNgayNhap = dngayNhap;
-        }
+        public HoaDonNhap(string smaHDNhap) { }
 
         public HoaDonNhap(string sMaHDNhap, string sTenTk, DateTime dNgayNhap)
         {
@@ -30,6 +24,6 @@ namespace Btl_QuanLyNhaSach.Object
         public string SMaHDNhap { get => sMaHDNhap; set => sMaHDNhap = value; }
         public string STenTk { get => sTenTk; set => sTenTk = value; }
         public DateTime DNgayNhap { get => dNgayNhap; set => dNgayNhap = value; }
-        public string IMaNV { get; internal set; }
+        public object IMaNV { get; internal set; }
     }
 }
