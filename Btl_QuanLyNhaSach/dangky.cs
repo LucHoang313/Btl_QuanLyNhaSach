@@ -18,12 +18,6 @@ namespace Btl_QuanLyNhaSach
     public partial class dangky : Form
     {
         ModifyTaiKhoan modify = new ModifyTaiKhoan();
-        public string iMaNV;
-
-        public dangky(string iMaNV)
-        {
-            this.iMaNV = iMaNV;
-        }
 
         public dangky()
         {
@@ -98,7 +92,7 @@ namespace Btl_QuanLyNhaSach
 
             try
             {
-                string query = "Insert into tblTaiKhoan values ('" + sTenTk + "','" + sMatKhau + "','" + iMaNV + "','" + sTen + "','" + sMaLoai + "')";
+                string query = "Insert into tblTaiKhoan values ('" + sTenTk + "','" + sMatKhau + "','" + sTen + "','" + sMaLoai + "')";
                 modify.Command(query);
                 MessageBox.Show("Bạn đã đăng kí tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dangky_Load(sender, e);

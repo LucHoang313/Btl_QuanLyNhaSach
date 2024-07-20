@@ -21,18 +21,18 @@ namespace Btl_QuanLyNhaSach
         }
 
         // Sử lí sự kiện tìm kiếm danh sách hóa đơn theo tên
-        private void sTenTk_TextChanged(object sender, EventArgs e)
+        private void iMaNV_TextChanged(object sender, EventArgs e)
         {
-            string name = sTenTk.Text;
+            string name = iMaNV.Text;
             if (name == "")
             {
                 danhsachhoadonban_Load(sender, e);
             }
             else
             {
-                string query = "select tblHoaDonBan.sMaHDBan AS N'Mã Hóa Đơn', sTenTk AS N'Tên Người Lập HĐ', tblKhachHang.sTenKH AS N'Tên Khách Hàng', dNgayLap AS N'Ngày Lập HĐ', COUNT(tblChiTietHoaDonBan.iSoLuongBan) AS N'Tổng Số Lượng Sách Bán', SUM(tblChiTietHoaDonBan.fThanhTien) AS N'Tổng Tiền' " +
+                string query = "select tblHoaDonBan.sMaHDBan AS N'Mã Hóa Đơn', tblHoaDonBan.iMaNV AS N'Tên Người Lập HĐ', tblKhachHang.sTenKH AS N'Tên Khách Hàng', dNgayLap AS N'Ngày Lập HĐ', COUNT(tblChiTietHoaDonBan.iSoLuongBan) AS N'Tổng Số Lượng Sách Bán', SUM(tblChiTietHoaDonBan.fThanhTien) AS N'Tổng Tiền' " +
                 "FROM tblChiTietHoaDonBan inner join tblHoaDonBan on tblHoaDonBan.sMaHDBan = tblChiTietHoaDonBan.sMaHDBan " +
-                "inner join tblKhachHang on tblHoaDonBan.sMaKH = tblKhachHang.sMaKH WHERE sTenTk LIKE N'%" + name + "%' group by tblHoaDonBan.sMaHDBan,sTenTk,tblKhachHang.sTenKH,dNgayLap";
+                "inner join tblKhachHang on tblHoaDonBan.sMaKH = tblKhachHang.sMaKH WHERE tblHoaDonBan.iMaNV LIKE N'%" + name + "%' group by tblHoaDonBan.sMaHDBan,tblHoaDonBan.iMaNV,tblKhachHang.sTenKH,dNgayLap";
                 dataGridView_DanhSachHDBan.DataSource = modify.Table(query);
             }
         }
@@ -59,14 +59,22 @@ namespace Btl_QuanLyNhaSach
             if (name == "")
             {
                 danhsachhoadonban_Load(sender, e);
-            }    
+            }
             else
             {
-                string query = "select tblHoaDonBan.sMaHDBan AS N'Mã Hóa Đơn', sTenTk AS N'Tên Người Lập HĐ', tblKhachHang.sTenKH AS N'Tên Khách Hàng', dNgayLap AS N'Ngày Lập HĐ', COUNT(tblChiTietHoaDonBan.iSoLuongBan) AS N'Tổng Số Lượng Sách Bán', SUM(tblChiTietHoaDonBan.fThanhTien) AS N'Tổng Tiền' " +
+                string query = "select tblHoaDonBan.sMaHDBan AS N'Mã Hóa Đơn', tblHoaDonBan.iMaNV AS N'Tên Người Lập HĐ', tblKhachHang.sTenKH AS N'Tên Khách Hàng', dNgayLap AS N'Ngày Lập HĐ', COUNT(tblChiTietHoaDonBan.iSoLuongBan) AS N'Tổng Số Lượng Sách Bán', SUM(tblChiTietHoaDonBan.fThanhTien) AS N'Tổng Tiền' " +
                 "FROM tblChiTietHoaDonBan inner join tblHoaDonBan on tblHoaDonBan.sMaHDBan = tblChiTietHoaDonBan.sMaHDBan " +
-                "inner join tblKhachHang on tblHoaDonBan.sMaKH = tblKhachHang.sMaKH WHERE tblHoaDonBan.sMaHDBan LIKE N'%" + name + "%' group by tblHoaDonBan.sMaHDBan,sTenTk,tblKhachHang.sTenKH,dNgayLap";
+                "inner join tblKhachHang on tblHoaDonBan.sMaKH = tblKhachHang.sMaKH WHERE tblHoaDonBan.sMaHDBan LIKE N'%" + name + "%' group by tblHoaDonBan.sMaHDBan,tblHoaDonBan.iMaNV,tblKhachHang.sTenKH,dNgayLap";
                 dataGridView_DanhSachHDBan.DataSource = modify.Table(query);
-            }    
+            }
+        }
+
+        private void DeleteTextBoxes()
+        {
+            sMaHDBan.Text = "";
+            iMaNV.Text = "";
+            date_BatDau.Text = "";
+            date_KetThuc.Text = "";
         }
 
         // Sử lí sự kiện đổ danh sách ra datagridview
@@ -74,23 +82,29 @@ namespace Btl_QuanLyNhaSach
         {
             try
             {
-                dataGridView_DanhSachHDBan.DataSource = modify.Table("select tblHoaDonBan.sMaHDBan AS N'Mã Hóa Đơn', sTenTk AS N'Tên Người Lập HĐ', tblKhachHang.sTenKH AS N'Tên Khách Hàng', dNgayLap AS N'Ngày Lập HĐ', COUNT(tblChiTietHoaDonBan.iSoLuongBan) AS N'Tổng Số Lượng Sách Bán', SUM(tblChiTietHoaDonBan.fThanhTien) AS N'Tổng Tiền' " +
-                    "FROM tblChiTietHoaDonBan inner join tblHoaDonBan on tblHoaDonBan.sMaHDBan = tblChiTietHoaDonBan.sMaHDBan inner join tblKhachHang on tblHoaDonBan.sMaKH = tblKhachHang.sMaKH where dNgayLap like GETDATE() group by tblHoaDonBan.sMaHDBan,sTenTk,tblKhachHang.sTenKH,dNgayLap");
+                string query = "SELECT tblHoaDonBan.sMaHDBan AS 'Mã Hóa Đơn', tblHoaDonBan.iMaNV AS 'Mã Nhân Viên', tblNhanVien.sHoTen AS 'Người lập hóa đơn', tblKhachHang.sTenKH AS 'Tên Khách Hàng', dNgayLap AS 'Ngày Lập' " +
+                               "FROM tblHoaDonBan " +
+                               "INNER JOIN tblNhanVien ON tblHoaDonBan.iMaNV = tblNhanVien.iMaNV " +
+                               "INNER JOIN tblKhachHang ON tblHoaDonBan.sMaKH = tblKhachHang.sMaKH";
+
+                dataGridView_DanhSachHDBan.DataSource = modify.Table(query);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
+            DeleteTextBoxes();
         }
+
 
         // Sử lí sự kiện theo ngày
         private void btnTimKienHoaDon_Click(object sender, EventArgs e)
         {
             DateTime dateTimebatdau = date_BatDau.Value;
             DateTime dateTimeketthuc = date_KetThuc.Value;
-            string query = "select tblHoaDonBan.sMaHDBan AS N'Mã Hóa Đơn', sTenTk AS N'Tên Người Lập HĐ', tblKhachHang.sTenKH AS N'Tên Khách Hàng', dNgayLap AS N'Ngày Lập HĐ', COUNT(tblChiTietHoaDonBan.iSoLuongBan) AS N'Tổng Số Lượng Sách Bán', SUM(tblChiTietHoaDonBan.fThanhTien) AS N'Tổng Tiền' " +
+            string query = "select tblHoaDonBan.sMaHDBan AS N'Mã Hóa Đơn', tblHoaDonBan.iMaNV AS N'Tên Người Lập HĐ', tblKhachHang.sTenKH AS N'Tên Khách Hàng', dNgayLap AS N'Ngày Lập HĐ', COUNT(tblChiTietHoaDonBan.iSoLuongBan) AS N'Tổng Số Lượng Sách Bán', SUM(tblChiTietHoaDonBan.fThanhTien) AS N'Tổng Tiền' " +
                 "FROM tblChiTietHoaDonBan inner join tblHoaDonBan on tblHoaDonBan.sMaHDBan = tblChiTietHoaDonBan.sMaHDBan " +
-                "inner join tblKhachHang on tblHoaDonBan.sMaKH = tblKhachHang.sMaKH WHERE dNgayLap >= '" + dateTimebatdau + "' AND dNgayLap <= '" + dateTimeketthuc + "'group by tblHoaDonBan.sMaHDBan,sTenTk,tblKhachHang.sTenKH,dNgayLap";
+                "inner join tblKhachHang on tblHoaDonBan.sMaKH = tblKhachHang.sMaKH WHERE dNgayLap >= '" + dateTimebatdau + "' AND dNgayLap <= '" + dateTimeketthuc + "'group by tblHoaDonBan.sMaHDBan,tblHoaDonBan.iMaNV,tblKhachHang.sTenKH,dNgayLap";
             dataGridView_DanhSachHDBan.DataSource = modify.Table(query);
         }
     }

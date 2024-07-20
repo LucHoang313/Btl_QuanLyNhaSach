@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,37 +23,93 @@ namespace Btl_QuanLyNhaSach
         public tblchitiethoadonban()
         {
             InitializeComponent();
+            LoadComboBoxData();
+
         }
+
+        private void LoadComboBoxData()
+        {
+            try
+            {
+                using (SqlConnection con = Connection.GetSqlConnection())
+                {
+                    con.Open();
+
+                    // Load data for comboBox_iMaNV
+                    string sqlNV = "SELECT iMaNV, sHoTen FROM tblNhanVien";
+                    SqlCommand cmdNV = new SqlCommand(sqlNV, con);
+                    SqlDataReader readerNV = cmdNV.ExecuteReader();
+                    DataTable dtNV = new DataTable();
+                    dtNV.Load(readerNV);
+                    comboBox_iMaNV.DataSource = dtNV;
+                    comboBox_iMaNV.DisplayMember = "iMaNV";
+                    comboBox_iMaNV.ValueMember = "iMaNV";
+
+                    // Load data for comboBox_sMaKH
+                    string sqlKH = "SELECT sMaKH, sTenKH FROM tblKhachHang";
+                    SqlCommand cmdKH = new SqlCommand(sqlKH, con);
+                    SqlDataReader readerKH = cmdKH.ExecuteReader();
+                    DataTable dtKH = new DataTable();
+                    dtKH.Load(readerKH);
+                    comboBox_sMaKH.DataSource = dtKH;
+                    comboBox_sMaKH.DisplayMember = "sTenKH";
+                    comboBox_sMaKH.ValueMember = "sMaKH";
+
+                    //Load data for comboBox_sMaHDBan
+                    string sqlHDBan = "SELECT sMaHDBan FROM tblHoaDonBan";
+                    SqlCommand cmdHDBan = new SqlCommand(sqlHDBan, con);
+                    SqlDataReader readerHDBan = cmdHDBan.ExecuteReader();
+                    DataTable dtHDBan = new DataTable();
+                    dtHDBan.Load(readerHDBan);
+                    comboBox_sMaHDBan.DataSource = dtHDBan;
+                    comboBox_sMaHDBan.DisplayMember = "sMaHDBan";
+                    comboBox_sMaHDBan.ValueMember = "sMaHDBan";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
 
         private void btnTimKienHoaDon_Click(object sender, EventArgs e)
         {
-            if (sMaHDBan.Text == "")
+            // Khởi tạo câu truy vấn SQL cơ bản
+            string query = "SELECT c.iID, c.sMaHDBan AS N'Mã HĐ Bán', c.sMaSach AS N'Mã Sách', c.sTenSach AS N'Tên Sách', c.iSoLuongBan AS N'Số Lượng Bán', c.fGiaSach AS N'Giá Sách', c.fThanhTien AS N'Thành Tiền', " +
+                           "h.iMaNV AS N'Mã Nhân Viên', nv.sHoTen AS N'Tên Nhân Viên', h.sMaKH AS N'Mã Khách Hàng', kh.sTenKH AS N'Tên Khách Hàng' " +
+                           "FROM tblChiTietHoaDonBan c " +
+                           "INNER JOIN tblHoaDonBan h ON c.sMaHDBan = h.sMaHDBan " +
+                           "INNER JOIN tblNhanVien nv ON h.iMaNV = nv.iMaNV " +
+                           "INNER JOIN tblKhachHang kh ON h.sMaKH = kh.sMaKH " +
+                           "WHERE 1=1"; // Điều kiện cơ bản để dễ dàng thêm điều kiện khác
+
+            // Thêm điều kiện tìm kiếm theo mã hóa đơn bán nếu có
+            if (!string.IsNullOrEmpty(comboBox_sMaHDBan.Text))
             {
-                MessageBox.Show("Mời bạn nhập mã hóa đơn nhập!");
-                return;
+                query += " AND c.sMaHDBan = '" + comboBox_sMaHDBan.SelectedValue.ToString() + "'";
             }
-            else
+
+            // Thêm điều kiện tìm kiếm theo mã khách hàng nếu có
+            if (comboBox_sMaKH.SelectedIndex != -1)
             {
-                SqlConnection con = Connection.GetSqlConnection();
-                string sql = "SELECT * FROM tblHoaDonBan WHERE sMaHDBan" +
-                    "    = '" + sMaHDBan.Text + "'";
-                SqlCommand cmd = new SqlCommand(sql, con);
-                SqlDataReader myreader; try
-                {
-                    con.Open();
-                    myreader = cmd.ExecuteReader();
-                    while (myreader.Read())
-                    {
-                        sMaHDBan.Text = myreader.GetString(0);
-                        sTenTk.Text = myreader.GetString(1);
-                        sMaKH.Text = myreader.GetString(2);
-                        dNgayLap.Value = myreader.GetDateTime(3);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                query += " AND h.sMaKH = '" + comboBox_sMaKH.SelectedValue.ToString() + "'";
+            }
+
+            // Thêm điều kiện tìm kiếm theo mã nhân viên nếu có
+            if (comboBox_iMaNV.SelectedIndex != -1)
+            {
+                query += " AND h.iMaNV = " + comboBox_iMaNV.SelectedValue.ToString();
+            }
+
+            // Thực hiện truy vấn và gán dữ liệu vào DataGridView
+            try
+            {
+                dataGridView_ChiTietHDBan.DataSource = modify.Table(query);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tìm kiếm: " + ex.Message);
             }
         }
 
@@ -65,6 +122,9 @@ namespace Btl_QuanLyNhaSach
             fGiaSach.Text = "";
             iSoLuong.Text = "";
             fThanhTien.Text = "";
+            comboBox_iMaNV.Text = "";
+            comboBox_sMaKH.Text = "";
+            comboBox_sMaHDBan.Text = "";
         }
 
         // Sử lí sự kiện nhập không được để trống
@@ -83,7 +143,7 @@ namespace Btl_QuanLyNhaSach
         private void GetValuesTextBox()
         {
             int iiD = int.Parse(text_id.Text);
-            string smahdBan = sMaHDBan.Text;
+            string smahdBan = comboBox_sMaHDBan.SelectedValue.ToString();
             string smasach = sMaSach.Text;
             string stenSach = sTenSach.Text;
             int isoLuongBan = int.Parse(iSoLuong.Text);
@@ -111,29 +171,60 @@ namespace Btl_QuanLyNhaSach
         {
             try
             {
-                dataGridView_ChiTietHDBan.DataSource = modify.Table("SELECT iID, sMaHDBan AS N'Mã HĐ Bán', sMaSach AS N'Mã Sách', sTenSach AS N'Tên Sách', iSoLuongBan AS N'Số Lượng Bán', fGiaSach AS N'Giá Sách', fThanhTien AS N'Thành Tiền'  FROM tblChiTietHoaDonBan ");
+                dataGridView_ChiTietHDBan.DataSource = modify.Table(
+                    "SELECT c.iID, c.sMaHDBan AS N'Mã HĐ Bán', c.sMaSach AS N'Mã Sách', c.sTenSach AS N'Tên Sách', c.iSoLuongBan AS N'Số Lượng Bán', c.fGiaSach AS N'Giá Sách', c.fThanhTien AS N'Thành Tiền', " +
+                    "h.iMaNV AS N'Mã Nhân Viên', nv.sHoTen AS N'Tên Nhân Viên', h.sMaKH AS N'Mã Khách Hàng', kh.sTenKH AS N'Tên Khách Hàng' " +
+                    "FROM tblChiTietHoaDonBan c " +
+                    "INNER JOIN tblHoaDonBan h ON c.sMaHDBan = h.sMaHDBan " +
+                    "INNER JOIN tblNhanVien nv ON h.iMaNV = nv.iMaNV " +
+                    "INNER JOIN tblKhachHang kh ON h.sMaKH = kh.sMaKH");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
             DeleteTextBoxes();
+            LoadComboBoxData();
+            LoadComboBoxData();
         }
+
+
+        private void LoadData()
+        {
+            string query = "SELECT * FROM tblChiTietHoaDonBan";
+            using (SqlConnection con = Connection.GetSqlConnection())
+            {
+                SqlDataAdapter da = new SqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView_ChiTietHDBan.DataSource = dt;
+            }
+        }
+
 
         // Sử lí sự click vào item trong datagridview
         private void dataGridView_ChiTietHDBan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView_ChiTietHDBan.Rows.Count > 1)
+            if (e.RowIndex >= 0)
             {
-                text_id.Text = dataGridView_ChiTietHDBan.SelectedRows[0].Cells[0].Value.ToString();
-                sMaHDBan.Text = dataGridView_ChiTietHDBan.SelectedRows[0].Cells[1].Value.ToString();
-                sMaSach.Text = dataGridView_ChiTietHDBan.SelectedRows[0].Cells[2].Value.ToString();
-                sTenSach.Text = dataGridView_ChiTietHDBan.SelectedRows[0].Cells[3].Value.ToString();
-                iSoLuong.Text = dataGridView_ChiTietHDBan.SelectedRows[0].Cells[4].Value.ToString();
-                fGiaSach.Text = dataGridView_ChiTietHDBan.SelectedRows[0].Cells[5].Value.ToString();
-                fThanhTien.Text = dataGridView_ChiTietHDBan.SelectedRows[0].Cells[6].Value.ToString();
+                DataGridViewRow row = dataGridView_ChiTietHDBan.Rows[e.RowIndex];
+                text_id.Text = row.Cells["iID"].Value.ToString();
+                comboBox_sMaHDBan.SelectedValue = row.Cells["Mã HĐ Bán"].Value.ToString();
+                sMaSach.Text = row.Cells["Mã Sách"].Value.ToString();
+                sTenSach.Text = row.Cells["Tên Sách"].Value.ToString();
+                iSoLuong.Text = row.Cells["Số Lượng Bán"].Value.ToString();
+                fGiaSach.Text = row.Cells["Giá Sách"].Value.ToString();
+                fThanhTien.Text = row.Cells["Thành Tiền"].Value.ToString();
+                comboBox_iMaNV.SelectedValue = row.Cells["Mã Nhân Viên"].Value.ToString();
+                comboBox_sMaKH.SelectedValue = row.Cells["Mã Khách Hàng"].Value.ToString();
             }
         }
+
+
+
+
+
+
 
         // Sử lí sự kiện khi nhập mã sách thì hiện tên sách
         private void sMaSach_TextChanged(object sender, EventArgs e)
@@ -162,7 +253,7 @@ namespace Btl_QuanLyNhaSach
         // Sử lí sự kiện thêm 
         private void btnThemHDBan_Click(object sender, EventArgs e)
         {
-            if (sMaHDBan.Text == "")
+            if (comboBox_sMaHDBan.Text == "")
             {
                 MessageBox.Show("Mời bạn nhập mã hóa đơn bán!");
                 return ;
@@ -235,7 +326,7 @@ namespace Btl_QuanLyNhaSach
         // Sử lí sự kiện cập nhật dữ liệu
         private void btnCapNhatHDBan_Click(object sender, EventArgs e)
         {
-            if (sMaHDBan.Text == "")
+            if (comboBox_sMaHDBan.Text == "")
             {
                 MessageBox.Show("Mời bạn nhập mã hóa đơn bán!");
                 return;
@@ -289,6 +380,12 @@ namespace Btl_QuanLyNhaSach
                     MessageBox.Show("Lỗi xóa: " + ex.Message);
                 }
             }
+        }
+
+        private void btnTiepTuc_Click(object sender, EventArgs e)
+        {
+            tblchitiethoadonban_Load(sender,e);
+            DeleteTextBoxes();
         }
     }
 }

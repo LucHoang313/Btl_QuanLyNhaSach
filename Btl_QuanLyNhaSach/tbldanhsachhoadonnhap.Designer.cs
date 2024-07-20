@@ -40,7 +40,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnTimKienHoaDon = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.sTenTk = new System.Windows.Forms.TextBox();
+            this.iMaNV = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DanhSachHDNhap)).BeginInit();
@@ -54,9 +54,9 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(16, 47);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(380, 80);
             this.groupBox1.TabIndex = 82;
             this.groupBox1.TabStop = false;
@@ -65,7 +65,7 @@
             // sMaHDBan
             // 
             this.sMaHDBan.Location = new System.Drawing.Point(148, 31);
-            this.sMaHDBan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sMaHDBan.Margin = new System.Windows.Forms.Padding(2);
             this.sMaHDBan.Name = "sMaHDBan";
             this.sMaHDBan.Size = new System.Drawing.Size(194, 21);
             this.sMaHDBan.TabIndex = 3;
@@ -74,18 +74,18 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(46, 33);
+            this.label5.Location = new System.Drawing.Point(34, 33);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 15);
+            this.label5.Size = new System.Drawing.Size(118, 15);
             this.label5.TabIndex = 2;
-            this.label5.Text = "Mã Hóa Đơn Bán:  ";
+            this.label5.Text = "Mã Hóa Đơn Nhập:  ";
             // 
             // date_KetThuc
             // 
             this.date_KetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.date_KetThuc.Location = new System.Drawing.Point(206, 51);
-            this.date_KetThuc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.date_KetThuc.Margin = new System.Windows.Forms.Padding(2);
             this.date_KetThuc.Name = "date_KetThuc";
             this.date_KetThuc.Size = new System.Drawing.Size(225, 21);
             this.date_KetThuc.TabIndex = 3;
@@ -104,7 +104,7 @@
             // 
             this.date_BatDau.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.date_BatDau.Location = new System.Drawing.Point(206, 24);
-            this.date_BatDau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.date_BatDau.Margin = new System.Windows.Forms.Padding(2);
             this.date_BatDau.Name = "date_BatDau";
             this.date_BatDau.Size = new System.Drawing.Size(225, 21);
             this.date_BatDau.TabIndex = 1;
@@ -123,7 +123,7 @@
             // 
             this.dataGridView_DanhSachHDNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_DanhSachHDNhap.Location = new System.Drawing.Point(101, 241);
-            this.dataGridView_DanhSachHDNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView_DanhSachHDNhap.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DanhSachHDNhap.Name = "dataGridView_DanhSachHDNhap";
             this.dataGridView_DanhSachHDNhap.RowHeadersWidth = 62;
             this.dataGridView_DanhSachHDNhap.RowTemplate.Height = 28;
@@ -152,9 +152,9 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(16, 132);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(783, 78);
             this.groupBox2.TabIndex = 83;
             this.groupBox2.TabStop = false;
@@ -164,7 +164,7 @@
             // 
             this.btnTimKienHoaDon.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKienHoaDon.Location = new System.Drawing.Point(525, 27);
-            this.btnTimKienHoaDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTimKienHoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimKienHoaDon.Name = "btnTimKienHoaDon";
             this.btnTimKienHoaDon.Size = new System.Drawing.Size(111, 33);
             this.btnTimKienHoaDon.TabIndex = 67;
@@ -174,26 +174,26 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.sTenTk);
+            this.groupBox3.Controls.Add(this.iMaNV);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(416, 47);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(380, 80);
             this.groupBox3.TabIndex = 84;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tìm kiếm hóa đơn theo tên người lập";
             // 
-            // sTenTk
+            // iMaNV
             // 
-            this.sTenTk.Location = new System.Drawing.Point(163, 31);
-            this.sTenTk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.sTenTk.Name = "sTenTk";
-            this.sTenTk.Size = new System.Drawing.Size(194, 21);
-            this.sTenTk.TabIndex = 1;
-            this.sTenTk.TextChanged += new System.EventHandler(this.sTenTk_TextChanged);
+            this.iMaNV.Location = new System.Drawing.Point(163, 31);
+            this.iMaNV.Margin = new System.Windows.Forms.Padding(2);
+            this.iMaNV.Name = "iMaNV";
+            this.iMaNV.Size = new System.Drawing.Size(194, 21);
+            this.iMaNV.TabIndex = 1;
+            this.iMaNV.TextChanged += new System.EventHandler(this.iMaNV_TextChanged);
             // 
             // label4
             // 
@@ -216,7 +216,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "tbldanhsachhoadonnhap";
             this.Text = "Danh Sách Hóa Đơn Nhập";
             this.Load += new System.EventHandler(this.tbldanhsachhoadonnhap_Load);
@@ -246,7 +246,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnTimKienHoaDon;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox sTenTk;
+        private System.Windows.Forms.TextBox iMaNV;
         private System.Windows.Forms.Label label4;
     }
 }
