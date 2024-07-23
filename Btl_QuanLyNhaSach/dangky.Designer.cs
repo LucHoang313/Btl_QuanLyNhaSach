@@ -1,6 +1,6 @@
 ﻿namespace Btl_QuanLyNhaSach
 {
-    partial class dangky
+    partial class btnDangNhap
     {
         /// <summary>
         /// Required designer variable.
@@ -42,6 +42,7 @@
             this.dataGridView_TaiKhoan = new System.Windows.Forms.DataGridView();
             this.btnXoaTaiKhoan = new System.Windows.Forms.Button();
             this.btnSuaTaiKhoan = new System.Windows.Forms.Button();
+            this.btnLogIn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_TaiKhoan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             this.checkShow_dangky.BackColor = System.Drawing.Color.White;
             this.checkShow_dangky.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.checkShow_dangky.Location = new System.Drawing.Point(265, 191);
-            this.checkShow_dangky.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkShow_dangky.Margin = new System.Windows.Forms.Padding(2);
             this.checkShow_dangky.Name = "checkShow_dangky";
             this.checkShow_dangky.Size = new System.Drawing.Size(15, 14);
             this.checkShow_dangky.TabIndex = 17;
@@ -76,7 +77,7 @@
             this.txtPassword_dangky.BackColor = System.Drawing.Color.White;
             this.txtPassword_dangky.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword_dangky.Location = new System.Drawing.Point(35, 184);
-            this.txtPassword_dangky.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword_dangky.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword_dangky.Name = "txtPassword_dangky";
             this.txtPassword_dangky.Size = new System.Drawing.Size(259, 26);
             this.txtPassword_dangky.TabIndex = 12;
@@ -86,7 +87,7 @@
             this.txtUsername_dangky.BackColor = System.Drawing.Color.White;
             this.txtUsername_dangky.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername_dangky.Location = new System.Drawing.Point(35, 123);
-            this.txtUsername_dangky.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsername_dangky.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername_dangky.Name = "txtUsername_dangky";
             this.txtUsername_dangky.Size = new System.Drawing.Size(259, 26);
             this.txtUsername_dangky.TabIndex = 11;
@@ -108,7 +109,7 @@
             this.txtAccountname_dangky.BackColor = System.Drawing.Color.White;
             this.txtAccountname_dangky.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAccountname_dangky.Location = new System.Drawing.Point(35, 261);
-            this.txtAccountname_dangky.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAccountname_dangky.Margin = new System.Windows.Forms.Padding(2);
             this.txtAccountname_dangky.Name = "txtAccountname_dangky";
             this.txtAccountname_dangky.Size = new System.Drawing.Size(259, 26);
             this.txtAccountname_dangky.TabIndex = 19;
@@ -146,8 +147,8 @@
             this.btnDangKyTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangKyTaiKhoan.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKyTaiKhoan.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDangKyTaiKhoan.Location = new System.Drawing.Point(535, 386);
-            this.btnDangKyTaiKhoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDangKyTaiKhoan.Location = new System.Drawing.Point(484, 365);
+            this.btnDangKyTaiKhoan.Margin = new System.Windows.Forms.Padding(2);
             this.btnDangKyTaiKhoan.Name = "btnDangKyTaiKhoan";
             this.btnDangKyTaiKhoan.Size = new System.Drawing.Size(201, 40);
             this.btnDangKyTaiKhoan.TabIndex = 22;
@@ -164,7 +165,7 @@
             "Kế Toán",
             "Nhân Viên"});
             this.cbb_MaLoai.Location = new System.Drawing.Point(104, 321);
-            this.cbb_MaLoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbb_MaLoai.Margin = new System.Windows.Forms.Padding(2);
             this.cbb_MaLoai.Name = "cbb_MaLoai";
             this.cbb_MaLoai.Size = new System.Drawing.Size(190, 28);
             this.cbb_MaLoai.TabIndex = 23;
@@ -184,7 +185,7 @@
             // 
             this.dataGridView_TaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_TaiKhoan.Location = new System.Drawing.Point(320, 96);
-            this.dataGridView_TaiKhoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView_TaiKhoan.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_TaiKhoan.Name = "dataGridView_TaiKhoan";
             this.dataGridView_TaiKhoan.RowHeadersWidth = 62;
             this.dataGridView_TaiKhoan.RowTemplate.Height = 28;
@@ -201,8 +202,8 @@
             this.btnXoaTaiKhoan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
             this.btnXoaTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoaTaiKhoan.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaTaiKhoan.Location = new System.Drawing.Point(86, 386);
-            this.btnXoaTaiKhoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoaTaiKhoan.Location = new System.Drawing.Point(35, 365);
+            this.btnXoaTaiKhoan.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoaTaiKhoan.Name = "btnXoaTaiKhoan";
             this.btnXoaTaiKhoan.Size = new System.Drawing.Size(201, 40);
             this.btnXoaTaiKhoan.TabIndex = 26;
@@ -218,8 +219,8 @@
             this.btnSuaTaiKhoan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
             this.btnSuaTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSuaTaiKhoan.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaTaiKhoan.Location = new System.Drawing.Point(312, 386);
-            this.btnSuaTaiKhoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSuaTaiKhoan.Location = new System.Drawing.Point(261, 365);
+            this.btnSuaTaiKhoan.Margin = new System.Windows.Forms.Padding(2);
             this.btnSuaTaiKhoan.Name = "btnSuaTaiKhoan";
             this.btnSuaTaiKhoan.Size = new System.Drawing.Size(201, 40);
             this.btnSuaTaiKhoan.TabIndex = 27;
@@ -227,12 +228,31 @@
             this.btnSuaTaiKhoan.UseVisualStyleBackColor = false;
             this.btnSuaTaiKhoan.Click += new System.EventHandler(this.btnSuaTaiKhoan_Click);
             // 
-            // dangky
+            // btnLogIn
+            // 
+            this.btnLogIn.BackColor = System.Drawing.Color.Honeydew;
+            this.btnLogIn.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnLogIn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.btnLogIn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.btnLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogIn.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogIn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnLogIn.Location = new System.Drawing.Point(689, 365);
+            this.btnLogIn.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogIn.Name = "btnLogIn";
+            this.btnLogIn.Size = new System.Drawing.Size(112, 40);
+            this.btnLogIn.TabIndex = 28;
+            this.btnLogIn.Text = "Đăng Nhập";
+            this.btnLogIn.UseVisualStyleBackColor = false;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
+            // 
+            // btnDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(815, 457);
+            this.Controls.Add(this.btnLogIn);
             this.Controls.Add(this.btnSuaTaiKhoan);
             this.Controls.Add(this.btnXoaTaiKhoan);
             this.Controls.Add(this.dataGridView_TaiKhoan);
@@ -248,8 +268,8 @@
             this.Controls.Add(this.txtUsername_dangky);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "dangky";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "btnDangNhap";
             this.Text = "Đăng Ký";
             this.Load += new System.EventHandler(this.dangky_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_TaiKhoan)).EndInit();
@@ -273,5 +293,6 @@
         private System.Windows.Forms.DataGridView dataGridView_TaiKhoan;
         private System.Windows.Forms.Button btnXoaTaiKhoan;
         private System.Windows.Forms.Button btnSuaTaiKhoan;
+        private System.Windows.Forms.Button btnLogIn;
     }
 }

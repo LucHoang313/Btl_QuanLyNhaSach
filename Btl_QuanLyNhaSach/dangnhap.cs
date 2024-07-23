@@ -105,7 +105,7 @@ namespace Btl_QuanLyNhaSach
         private void btnDangKy_Click(object sender, EventArgs e)
         {
             this.Hide();
-            dangky dangky = new dangky();
+            btnDangNhap dangky = new btnDangNhap();
             dangky.ShowDialog();
             dangky = null;
             this.Show();

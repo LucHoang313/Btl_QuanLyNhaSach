@@ -100,7 +100,7 @@ namespace Btl_QuanLyNhaSach
         // Chuyển sang form tài khoản
         private void button_TaiKhoan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new dangky());
+            OpenChildForm(new btnDangNhap());
         }
 
         // Sử lí sự kiện click vào button hóa đơn
@@ -189,7 +189,7 @@ namespace Btl_QuanLyNhaSach
         // Chuyển sang form tài khoản
         private void button_TaiKhoan_Click_1(object sender, EventArgs e)
         {
-            OpenChildForm(new dangky());
+            OpenChildForm(new btnDangNhap());
         }
 
         private void button_Sach_Click(object sender, EventArgs e)

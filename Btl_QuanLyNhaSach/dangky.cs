@@ -15,11 +15,11 @@ using System.Runtime.CompilerServices;
 
 namespace Btl_QuanLyNhaSach
 {
-    public partial class dangky : Form
+    public partial class btnDangNhap : Form
     {
         ModifyTaiKhoan modify = new ModifyTaiKhoan();
 
-        public dangky()
+        public btnDangNhap()
         {
             InitializeComponent();
             fillCombobox();
@@ -211,6 +211,15 @@ namespace Btl_QuanLyNhaSach
             {
                 MessageBox.Show("Tài khoản đã được đăng kí vui lòng đăng kí tài khoản khác!", "Thông báo", MessageBoxButtons.OK);
             }
+        }
+
+        private void btnLogIn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            dangnhap dangnhap = new dangnhap();
+            dangnhap.ShowDialog();
+            dangnhap = null;
+            this.Show();
         }
     }
 }
