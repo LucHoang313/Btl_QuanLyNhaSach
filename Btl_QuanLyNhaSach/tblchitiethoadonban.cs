@@ -75,34 +75,29 @@ namespace Btl_QuanLyNhaSach
 
         private void btnTimKienHoaDon_Click(object sender, EventArgs e)
         {
-            // Khởi tạo câu truy vấn SQL cơ bản
             string query = "SELECT c.iID, c.sMaHDBan AS N'Mã HĐ Bán', c.sMaSach AS N'Mã Sách', c.sTenSach AS N'Tên Sách', c.iSoLuongBan AS N'Số Lượng Bán', c.fGiaSach AS N'Giá Sách', c.fThanhTien AS N'Thành Tiền', " +
                            "h.iMaNV AS N'Mã Nhân Viên', nv.sHoTen AS N'Tên Nhân Viên', h.sMaKH AS N'Mã Khách Hàng', kh.sTenKH AS N'Tên Khách Hàng' " +
                            "FROM tblChiTietHoaDonBan c " +
                            "INNER JOIN tblHoaDonBan h ON c.sMaHDBan = h.sMaHDBan " +
                            "INNER JOIN tblNhanVien nv ON h.iMaNV = nv.iMaNV " +
                            "INNER JOIN tblKhachHang kh ON h.sMaKH = kh.sMaKH " +
-                           "WHERE 1=1"; // Điều kiện cơ bản để dễ dàng thêm điều kiện khác
+                           "WHERE 1=1";
 
-            // Thêm điều kiện tìm kiếm theo mã hóa đơn bán nếu có
             if (!string.IsNullOrEmpty(comboBox_sMaHDBan.Text))
             {
-                query += " AND c.sMaHDBan = '" + comboBox_sMaHDBan.SelectedValue.ToString() + "'";
+                query += " AND c.sMaHDBan LIKE '%" + comboBox_sMaHDBan.Text + "%'";
             }
 
-            // Thêm điều kiện tìm kiếm theo mã khách hàng nếu có
-            if (comboBox_sMaKH.SelectedIndex != -1)
+            if (!string.IsNullOrEmpty(comboBox_sMaKH.Text))
             {
-                query += " AND h.sMaKH = '" + comboBox_sMaKH.SelectedValue.ToString() + "'";
+                query += " AND h.sMaKH LIKE '%" + comboBox_sMaKH.Text + "%'";
             }
 
-            // Thêm điều kiện tìm kiếm theo mã nhân viên nếu có
-            if (comboBox_iMaNV.SelectedIndex != -1)
+            if (!string.IsNullOrEmpty(comboBox_iMaNV.Text))
             {
-                query += " AND h.iMaNV = " + comboBox_iMaNV.SelectedValue.ToString();
+                query += " AND h.iMaNV LIKE '%" + comboBox_iMaNV.Text + "%'";
             }
 
-            // Thực hiện truy vấn và gán dữ liệu vào DataGridView
             try
             {
                 dataGridView_ChiTietHDBan.DataSource = modify.Table(query);
@@ -112,7 +107,6 @@ namespace Btl_QuanLyNhaSach
                 MessageBox.Show("Lỗi tìm kiếm: " + ex.Message);
             }
         }
-
         // Sử lí sự kiện xóa hết các kí tự trong các ô
         private void DeleteTextBoxes()
         {

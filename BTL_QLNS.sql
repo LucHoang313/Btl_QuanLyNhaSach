@@ -380,17 +380,21 @@ GO
 EXEC proc_hoadonban @smahdban = HDBan_01
 GO
 
-SELECT * FROM tblTaiKhoan WHERE sTenTk <> 'admin'
-GO
-
-select * from tblChiTietHoaDonNhap where sMaSach = 'MS_01'
-GO
--
-
-
 create table tblTgTaiKhoan
 (
 	sTenTk varchar(10) not null,
 	dTgDangNhap date not null,
 )
 GO
+
+
+create proc sp_HDNhap(
+@smahdnhap varchar(20))
+as
+begin
+select * from tblHoaDonNhap where sMaHDNhap = @smahdnhap
+end;
+
+
+
+select * from tblHoaDonNhap

@@ -45,6 +45,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnTiepTuc = new System.Windows.Forms.Button();
+            this.btnInKH = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_KhachHang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -258,12 +259,30 @@
             this.btnTiepTuc.UseVisualStyleBackColor = false;
             this.btnTiepTuc.Click += new System.EventHandler(this.btnTiepTuc_Click);
             // 
+            // btnInKH
+            // 
+            this.btnInKH.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnInKH.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.btnInKH.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnInKH.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnInKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInKH.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInKH.Location = new System.Drawing.Point(672, 156);
+            this.btnInKH.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInKH.Name = "btnInKH";
+            this.btnInKH.Size = new System.Drawing.Size(140, 35);
+            this.btnInKH.TabIndex = 44;
+            this.btnInKH.Text = "In DSKH";
+            this.btnInKH.UseVisualStyleBackColor = false;
+            this.btnInKH.Click += new System.EventHandler(this.btnInKH_Click);
+            // 
             // tblkhachhang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(832, 474);
+            this.Controls.Add(this.btnInKH);
             this.Controls.Add(this.btnTiepTuc);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.sEmail);
@@ -310,5 +329,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnTiepTuc;
+        private System.Windows.Forms.Button btnInKH;
     }
 }

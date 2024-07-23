@@ -219,5 +219,15 @@ namespace Btl_QuanLyNhaSach
             tblkhachhang_Load(sender, e);
         }
 
+        private void btnInKH_Click(object sender, EventArgs e)
+        {
+            
+                this.Hide();
+                indskhachhang form1 = new indskhachhang();
+                form1.ShowDialog();
+                form1 = null;
+                this.Show();
+            
+        }
     }
 }

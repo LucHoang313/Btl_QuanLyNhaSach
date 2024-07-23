@@ -92,12 +92,12 @@ namespace Btl_QuanLyNhaSach
 
             try
             {
-                string query = "Insert into tblTaiKhoan values ('" + sTenTk + "','" + sMatKhau + "','" + sTen + "','" + sMaLoai + "')";
+                string query = "Insert into tblTaiKhoan(sTenTk, sMatKhau, sTen, sMaLoai) values ('" + sTenTk + "','" + sMatKhau + "','" + sTen + "','" + sMaLoai + "')";
                 modify.Command(query);
                 MessageBox.Show("Bạn đã đăng kí tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dangky_Load(sender, e);
             }
-            catch
+            catch(Exception ex)
             {
                 MessageBox.Show("Tài khoản đã được đăng kí vui lòng đăng kí tài khoản khác!", "Thông báo", MessageBoxButtons.OK);
             }

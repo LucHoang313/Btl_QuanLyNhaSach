@@ -44,6 +44,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnTiepTuc = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnInNXB = new System.Windows.Forms.Button();
+            this.masach = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_NXB)).BeginInit();
             this.SuspendLayout();
             // 
@@ -208,12 +212,51 @@
             this.btnTiepTuc.UseVisualStyleBackColor = true;
             this.btnTiepTuc.Click += new System.EventHandler(this.btnTiepTuc_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnInNXB
+            // 
+            this.btnInNXB.Location = new System.Drawing.Point(631, 154);
+            this.btnInNXB.Name = "btnInNXB";
+            this.btnInNXB.Size = new System.Drawing.Size(95, 32);
+            this.btnInNXB.TabIndex = 16;
+            this.btnInNXB.Text = "In NXB";
+            this.btnInNXB.UseVisualStyleBackColor = true;
+            this.btnInNXB.Click += new System.EventHandler(this.btnInNXB_Click);
+            // 
+            // masach
+            // 
+            this.masach.Location = new System.Drawing.Point(500, 154);
+            this.masach.Name = "masach";
+            this.masach.Size = new System.Drawing.Size(100, 20);
+            this.masach.TabIndex = 17;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(440, 157);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Mã Sách: ";
+            // 
             // tblNhaXuatBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(740, 453);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.masach);
+            this.Controls.Add(this.btnInNXB);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnTiepTuc);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.label5);
@@ -252,5 +295,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnTiepTuc;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnInNXB;
+        private System.Windows.Forms.TextBox masach;
+        private System.Windows.Forms.Label label4;
     }
 }

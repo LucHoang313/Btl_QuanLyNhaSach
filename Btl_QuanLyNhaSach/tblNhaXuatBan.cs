@@ -129,5 +129,30 @@ namespace Btl_QuanLyNhaSach
             txtDiaChi.Text = "";
 
             tblNhaXuatBan_Load(sender, e);        }
+
+        private void btnInNXB_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = Connection.GetSqlConnection();
+            string sql = "Select * from tblChiTietHoaDonNhap where sMaSach = '" + masach.Text + "'";
+            SqlCommand sqlCommand = new SqlCommand(sql, conn);
+            conn.Open();
+
+            SqlDataAdapter ad = new SqlDataAdapter();
+            ad.SelectCommand = sqlCommand;
+
+            DataTable dataTable = new DataTable();
+            ad.Fill(dataTable);
+
+            CrystalReport3 cryKH = new CrystalReport3();
+            cryKH.SetDataSource(dataTable);
+
+            indskhachhang inNXB = new indskhachhang();
+
+            inNXB.crystalReportViewer1.ReportSource = cryKH;
+            inNXB.ShowDialog();
+
+
+            conn.Close();
+        }
     }
 }
