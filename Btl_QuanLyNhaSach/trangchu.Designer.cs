@@ -56,7 +56,6 @@
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dsHoaDonNhap = new System.Windows.Forms.ToolStripMenuItem();
             this.dsHoaDonXuat = new System.Windows.Forms.ToolStripMenuItem();
-            this.ThongKe = new System.Windows.Forms.ToolStripMenuItem();
             this.nhàXuấtBảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_Body = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -393,7 +392,6 @@
             this.nhaXuatBan.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.chiTiếtHóaĐơnToolStripMenuItem,
             this.thốngKêToolStripMenuItem,
-            this.ThongKe,
             this.nhàXuấtBảnToolStripMenuItem});
             this.nhaXuatBan.Location = new System.Drawing.Point(0, 0);
             this.nhaXuatBan.Name = "nhaXuatBan";
@@ -450,14 +448,6 @@
             this.dsHoaDonXuat.Size = new System.Drawing.Size(153, 22);
             this.dsHoaDonXuat.Text = "Hóa Đơn Bán";
             this.dsHoaDonXuat.Click += new System.EventHandler(this.dsHoaDonXuat_Click);
-            // 
-            // ThongKe
-            // 
-            this.ThongKe.Image = global::Btl_QuanLyNhaSach.Properties.Resources.thongke;
-            this.ThongKe.Name = "ThongKe";
-            this.ThongKe.Size = new System.Drawing.Size(93, 28);
-            this.ThongKe.Text = "Thống Kê";
-            this.ThongKe.Click += new System.EventHandler(this.ThongKe_Click);
             // 
             // nhàXuấtBảnToolStripMenuItem
             // 
@@ -600,7 +590,6 @@
         private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dsHoaDonNhap;
         private System.Windows.Forms.ToolStripMenuItem dsHoaDonXuat;
-        private System.Windows.Forms.ToolStripMenuItem ThongKe;
         private System.Windows.Forms.ToolStripMenuItem nhàXuấtBảnToolStripMenuItem;
         private System.Windows.Forms.Button button2;
     }

@@ -133,7 +133,7 @@ namespace Btl_QuanLyNhaSach
         private void btnInNXB_Click(object sender, EventArgs e)
         {
             SqlConnection conn = Connection.GetSqlConnection();
-            string sql = "Select * from tblChiTietHoaDonNhap where sMaSach = '" + masach.Text + "'";
+            string sql = "Select * from tblNhaXuatBan ";
             SqlCommand sqlCommand = new SqlCommand(sql, conn);
             conn.Open();
 
@@ -143,7 +143,7 @@ namespace Btl_QuanLyNhaSach
             DataTable dataTable = new DataTable();
             ad.Fill(dataTable);
 
-            CrystalReport3 cryKH = new CrystalReport3();
+            CrystalReport2 cryKH = new CrystalReport2();
             cryKH.SetDataSource(dataTable);
 
             indskhachhang inNXB = new indskhachhang();
