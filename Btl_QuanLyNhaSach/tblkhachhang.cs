@@ -1,4 +1,5 @@
-﻿using Btl_QuanLyNhaSach.Modify;
+﻿using Btl_QuanLyNhaSach.CrystalReport;
+using Btl_QuanLyNhaSach.Modify;
 using Btl_QuanLyNhaSach.Object;
 using System;
 using System.Collections.Generic;
@@ -221,13 +222,29 @@ namespace Btl_QuanLyNhaSach
 
         private void btnInKH_Click(object sender, EventArgs e)
         {
-            
-                this.Hide();
-                indskhachhang form1 = new indskhachhang();
-                form1.ShowDialog();
-                form1 = null;
-                this.Show();
-            
+
+            SqlConnection conn = Connection.GetSqlConnection();
+            string sql = "Select * from tblKhachHang ";
+            SqlCommand sqlCommand = new SqlCommand(sql, conn);
+            conn.Open();
+
+            SqlDataAdapter ad = new SqlDataAdapter();
+            ad.SelectCommand = sqlCommand;
+
+            DataTable dataTable = new DataTable();
+            ad.Fill(dataTable);
+
+            CrystalReport1 cryKH = new CrystalReport1();
+            cryKH.SetDataSource(dataTable);
+
+            indskhachhang inNXB = new indskhachhang();
+
+            inNXB.crystalReportViewer1.ReportSource = cryKH;
+            inNXB.ShowDialog();
+
+
+            conn.Close();
+
         }
     }
 }

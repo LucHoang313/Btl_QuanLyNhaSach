@@ -42,6 +42,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnTiepTuc = new System.Windows.Forms.Button();
+            this.btnInHDN = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_HDNhap)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +51,7 @@
             // 
             this.dataGridView_HDNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_HDNhap.Location = new System.Drawing.Point(11, 64);
-            this.dataGridView_HDNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView_HDNhap.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_HDNhap.Name = "dataGridView_HDNhap";
             this.dataGridView_HDNhap.RowHeadersWidth = 62;
             this.dataGridView_HDNhap.RowTemplate.Height = 28;
@@ -63,7 +64,7 @@
             // 
             this.btnCapNhatHDNhap.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhatHDNhap.Location = new System.Drawing.Point(160, 364);
-            this.btnCapNhatHDNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCapNhatHDNhap.Margin = new System.Windows.Forms.Padding(2);
             this.btnCapNhatHDNhap.Name = "btnCapNhatHDNhap";
             this.btnCapNhatHDNhap.Size = new System.Drawing.Size(128, 25);
             this.btnCapNhatHDNhap.TabIndex = 35;
@@ -75,7 +76,7 @@
             // 
             this.btnXoaHDNhap.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaHDNhap.Location = new System.Drawing.Point(315, 365);
-            this.btnXoaHDNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoaHDNhap.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoaHDNhap.Name = "btnXoaHDNhap";
             this.btnXoaHDNhap.Size = new System.Drawing.Size(128, 23);
             this.btnXoaHDNhap.TabIndex = 35;
@@ -87,7 +88,7 @@
             // 
             this.btnThemHDNhap.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemHDNhap.Location = new System.Drawing.Point(11, 365);
-            this.btnThemHDNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemHDNhap.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemHDNhap.Name = "btnThemHDNhap";
             this.btnThemHDNhap.Size = new System.Drawing.Size(128, 23);
             this.btnThemHDNhap.TabIndex = 34;
@@ -110,7 +111,7 @@
             // 
             this.sMaHDNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sMaHDNhap.Location = new System.Drawing.Point(98, 26);
-            this.sMaHDNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sMaHDNhap.Margin = new System.Windows.Forms.Padding(2);
             this.sMaHDNhap.Name = "sMaHDNhap";
             this.sMaHDNhap.Size = new System.Drawing.Size(212, 23);
             this.sMaHDNhap.TabIndex = 23;
@@ -142,7 +143,7 @@
             this.dNgayNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dNgayNhap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dNgayNhap.Location = new System.Drawing.Point(98, 102);
-            this.dNgayNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dNgayNhap.Margin = new System.Windows.Forms.Padding(2);
             this.dNgayNhap.Name = "dNgayNhap";
             this.dNgayNhap.Size = new System.Drawing.Size(212, 23);
             this.dNgayNhap.TabIndex = 42;
@@ -156,9 +157,9 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(488, 64);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(324, 156);
             this.groupBox2.TabIndex = 45;
             this.groupBox2.TabStop = false;
@@ -205,12 +206,24 @@
             this.btnTiepTuc.UseVisualStyleBackColor = true;
             this.btnTiepTuc.Click += new System.EventHandler(this.btnTiepTuc_Click);
             // 
+            // btnInHDN
+            // 
+            this.btnInHDN.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnInHDN.Location = new System.Drawing.Point(586, 300);
+            this.btnInHDN.Name = "btnInHDN";
+            this.btnInHDN.Size = new System.Drawing.Size(128, 33);
+            this.btnInHDN.TabIndex = 48;
+            this.btnInHDN.Text = "Xuất HDN";
+            this.btnInHDN.UseVisualStyleBackColor = true;
+            this.btnInHDN.Click += new System.EventHandler(this.btnInHDN_Click);
+            // 
             // tblhoadonnhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(832, 474);
+            this.Controls.Add(this.btnInHDN);
             this.Controls.Add(this.btnTiepTuc);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.groupBox2);
@@ -219,7 +232,7 @@
             this.Controls.Add(this.btnXoaHDNhap);
             this.Controls.Add(this.btnThemHDNhap);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "tblhoadonnhap";
             this.Text = "Hóa Đơn Nhập";
             this.Load += new System.EventHandler(this.tblhoadonnhap_Load);
@@ -246,5 +259,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnTiepTuc;
+        private System.Windows.Forms.Button btnInHDN;
     }
 }

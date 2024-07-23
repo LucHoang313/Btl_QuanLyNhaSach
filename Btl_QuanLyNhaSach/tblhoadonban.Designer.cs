@@ -40,10 +40,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox_iMaNV = new System.Windows.Forms.ComboBox();
             this.comboBox_sTenKH = new System.Windows.Forms.ComboBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnTiepTuc = new System.Windows.Forms.Button();
-            this.comboBox_iMaNV = new System.Windows.Forms.ComboBox();
+            this.btnInHDB = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_HDBan)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -185,9 +186,18 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(252, 284);
+            this.groupBox1.Size = new System.Drawing.Size(252, 233);
             this.groupBox1.TabIndex = 86;
             this.groupBox1.TabStop = false;
+            // 
+            // comboBox_iMaNV
+            // 
+            this.comboBox_iMaNV.FormattingEnabled = true;
+            this.comboBox_iMaNV.ItemHeight = 13;
+            this.comboBox_iMaNV.Location = new System.Drawing.Point(106, 88);
+            this.comboBox_iMaNV.Name = "comboBox_iMaNV";
+            this.comboBox_iMaNV.Size = new System.Drawing.Size(119, 21);
+            this.comboBox_iMaNV.TabIndex = 86;
             // 
             // comboBox_sTenKH
             // 
@@ -221,14 +231,16 @@
             this.btnTiepTuc.UseVisualStyleBackColor = true;
             this.btnTiepTuc.Click += new System.EventHandler(this.btnTiepTuc_Click);
             // 
-            // comboBox_iMaNV
+            // btnInHDB
             // 
-            this.comboBox_iMaNV.FormattingEnabled = true;
-            this.comboBox_iMaNV.ItemHeight = 13;
-            this.comboBox_iMaNV.Location = new System.Drawing.Point(106, 88);
-            this.comboBox_iMaNV.Name = "comboBox_iMaNV";
-            this.comboBox_iMaNV.Size = new System.Drawing.Size(119, 21);
-            this.comboBox_iMaNV.TabIndex = 86;
+            this.btnInHDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnInHDB.Location = new System.Drawing.Point(656, 317);
+            this.btnInHDB.Name = "btnInHDB";
+            this.btnInHDB.Size = new System.Drawing.Size(80, 35);
+            this.btnInHDB.TabIndex = 89;
+            this.btnInHDB.Text = "Xuất HDB";
+            this.btnInHDB.UseVisualStyleBackColor = true;
+            this.btnInHDB.Click += new System.EventHandler(this.btnInHDB_Click);
             // 
             // tblhoadonban
             // 
@@ -236,6 +248,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(832, 474);
+            this.Controls.Add(this.btnInHDB);
             this.Controls.Add(this.btnTiepTuc);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.groupBox1);
@@ -273,5 +286,6 @@
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnTiepTuc;
         private System.Windows.Forms.ComboBox comboBox_iMaNV;
+        private System.Windows.Forms.Button btnInHDB;
     }
 }

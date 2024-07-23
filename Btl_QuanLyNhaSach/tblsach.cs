@@ -1,4 +1,5 @@
-﻿using Btl_QuanLyNhaSach.Modify;
+﻿using Btl_QuanLyNhaSach.CrystalReport;
+using Btl_QuanLyNhaSach.Modify;
 using Btl_QuanLyNhaSach.Object;
 using System;
 using System.Collections.Generic;
@@ -302,8 +303,6 @@ namespace Btl_QuanLyNhaSach
                 }
             }
         }
-
-
 
     }
 }

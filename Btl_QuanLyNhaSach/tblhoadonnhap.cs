@@ -1,4 +1,5 @@
-﻿using Btl_QuanLyNhaSach.Modify;
+﻿using Btl_QuanLyNhaSach.CrystalReport;
+using Btl_QuanLyNhaSach.Modify;
 using Btl_QuanLyNhaSach.Object;
 using System;
 using System.Collections.Generic;
@@ -253,6 +254,32 @@ namespace Btl_QuanLyNhaSach
                     ClearTextBoxesAndComboBox(ctrl);
                 }
             }
+        }
+
+        private void btnInHDN_Click(object sender, EventArgs e)
+        {
+
+            SqlConnection conn = Connection.GetSqlConnection();
+            string sql = "Select * from tblChiTietHoaDonNhap ";
+            SqlCommand sqlCommand = new SqlCommand(sql, conn);
+            conn.Open();
+
+            SqlDataAdapter ad = new SqlDataAdapter();
+            ad.SelectCommand = sqlCommand;
+
+            DataTable dataTable = new DataTable();
+            ad.Fill(dataTable);
+
+            CrystalReport3 cryKH = new CrystalReport3();
+            cryKH.SetDataSource(dataTable);
+
+            indskhachhang inNXB = new indskhachhang();
+
+            inNXB.crystalReportViewer1.ReportSource = cryKH;
+            inNXB.ShowDialog();
+
+
+            conn.Close();
         }
     }
 }
